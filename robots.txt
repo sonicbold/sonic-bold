@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hivesonic.com/sitemap.xml
