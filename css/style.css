@@ -97,7 +97,7 @@ body {
 }
 
 .eyebrow-dark {
-  color: #9ca3af;
+  color: #0284c7;
 }
 
 .section-headline {
@@ -110,7 +110,7 @@ body {
 }
 
 .section-headline-dark {
-  color: #ffffff;
+  color: #111827;
 }
 
 .section-sub {
@@ -121,7 +121,7 @@ body {
 }
 
 .section-sub-dark {
-  color: #9ca3af;
+  color: #4b5563;
 }
 
 /* Section Spacing */
@@ -130,22 +130,14 @@ body {
 }
 
 .section-dark {
-  background-color: var(--bg-dark);
-  color: var(--text-white);
+  background-color: #ffffff;
+  color: var(--text-primary);
   position: relative;
   overflow: hidden;
 }
 
 .section-dark::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(9, 13, 22, 0) 70%);
-  pointer-events: none;
+  content: none;
 }
 
 /* Buttons */
@@ -208,14 +200,14 @@ body {
 }
 
 .btn-dark-outline {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
 }
 
 .btn-dark-outline:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.4);
+  background-color: #f9fafb;
+  border-color: #9ca3af;
 }
 
 .btn-sm {
@@ -1248,8 +1240,8 @@ body {
    SECTION 8 — FINAL CALL TO ACTION
    ========================================================================== */
 .cta-banner {
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.8) 0%, rgba(9, 13, 22, 1) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #8b5cf6 100%);
+  border: none;
   border-radius: 28px;
   padding: 72px 40px;
   text-align: center;
@@ -1264,7 +1256,7 @@ body {
   transform: translateX(-50%);
   width: 600px;
   height: 300px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1299,10 +1291,10 @@ body {
    LEGAL FOOTER & A2P 10DLC COMPLIANCE
    ========================================================================== */
 .footer {
-  background-color: #050810;
-  color: #9ca3af;
+  background-color: #f9fafb;
+  color: #4b5563;
   padding: 72px 0 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #e5e7eb;
 }
 
 .footer-top {
@@ -1316,7 +1308,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ffffff;
+  color: #111827;
   font-weight: 700;
   font-size: 1.15rem;
   margin-bottom: 12px;
@@ -1324,7 +1316,7 @@ body {
 
 .footer-brand-desc {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #4b5563;
   line-height: 1.6;
   max-width: 320px;
 }
@@ -1334,7 +1326,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #ffffff;
+  color: #111827;
   margin-bottom: 18px;
 }
 
@@ -1346,14 +1338,14 @@ body {
 }
 
 .footer-link {
-  color: #9ca3af;
+  color: #6b7280;
   text-decoration: none;
   font-size: 0.875rem;
   transition: var(--transition);
 }
 
 .footer-link:hover {
-  color: #ffffff;
+  color: #111827;
 }
 
 /* A2P 10DLC Compliance Box */
@@ -1408,7 +1400,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid #e5e7eb;
   font-size: 0.8125rem;
   color: #4b5563;
 }
