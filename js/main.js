@@ -1,5 +1,5 @@
 /**
- * HIVE SONIC — Main JavaScript
+ * SONIC BOLD — Main JavaScript
  * Handles smooth interactivity, modals, form submission, and animations.
  */
 
