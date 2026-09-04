@@ -137,7 +137,15 @@ body {
 }
 
 .section-dark::before {
-  content: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 400px;
+  background: none;
+  pointer-events: none;
 }
 
 /* Buttons */
@@ -1057,8 +1065,8 @@ body {
 }
 
 .workflow-step {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #f9fafb;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 16px 24px;
   display: flex;
@@ -1068,8 +1076,8 @@ body {
 }
 
 .workflow-step:hover {
-  background-color: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.16);
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
   transform: translateX(4px);
 }
 
@@ -1085,7 +1093,7 @@ body {
   border-radius: 50%;
   background-color: rgba(139, 92, 246, 0.15);
   border: 1px solid rgba(139, 92, 246, 0.3);
-  color: #c4b5fd;
+  color: #7c3aed;
   font-size: 0.75rem;
   font-weight: 700;
   display: flex;
@@ -1096,7 +1104,7 @@ body {
 .workflow-step-text {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #f9fafb;
+  color: #111827;
 }
 
 .workflow-step-arrow {
@@ -1115,8 +1123,8 @@ body {
 }
 
 .case-card {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   display: flex;
@@ -1256,7 +1264,7 @@ body {
   transform: translateX(-50%);
   width: 600px;
   height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1316,7 +1324,7 @@ body {
 
 .footer-brand-desc {
   font-size: 0.875rem;
-  color: #4b5563;
+  color: #6b7280;
   line-height: 1.6;
   max-width: 320px;
 }
@@ -1611,7 +1619,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 0;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 24px;
