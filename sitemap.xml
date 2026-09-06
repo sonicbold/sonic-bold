@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sonicbold.com/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sonicbold.com/privacy-policy.html</loc>
-    <priority>0.5</priority>
-  </url>
+  <url><loc>https://www.sonicbold.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.sonicbold.com/blog.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.sonicbold.com/blog-plumbing-missed-calls-lost-jobs.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sonicbold.com/blog-lsa-vs-search-ads-plumbers.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sonicbold.com/blog-shared-leads-vs-exclusive-plumbing-leads.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sonicbold.com/blog-get-more-plumbing-leads.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sonicbold.com/blog-lsa-for-plumbers.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sonicbold.com/google-ads-for-plumbers.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sonicbold.com/privacy-policy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://www.sonicbold.com/terms.html</loc><priority>0.5</priority></url>
 </urlset>
