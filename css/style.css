@@ -2255,3 +2255,217 @@ body {
   margin-top: 2px;
   color: #10b981;
 }
+
+
+/* ==========================================================================
+   MOBILE-FIRST CRO & UX ENHANCEMENTS
+   ========================================================================== */
+
+/* Prevent iOS Safari Auto-Zoom on Form Inputs */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea,
+  .form-input,
+  .form-input-sm {
+    font-size: 16px !important; /* iOS Safari threshold */
+  }
+
+  /* Compact section padding on mobile for faster reading rhythm */
+  .section {
+    padding: 52px 0;
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .hero-card-form {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .hero-form-title {
+    font-size: 1.3rem;
+  }
+
+  /* Trust Strip on mobile */
+  .trust-strip {
+    padding: 16px 0;
+  }
+
+  .trust-strip-inner {
+    gap: 14px 20px;
+    font-size: 0.8125rem;
+    justify-content: flex-start;
+  }
+
+  /* Problem Cards */
+  .problem-card {
+    padding: 22px 18px;
+  }
+
+  /* System Stages */
+  .stage-row, .stage-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .stage-visual {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .floating-ui-card {
+    padding: 18px 14px;
+  }
+
+  /* Case Studies */
+  .cs-feature-left, .cs-feature-right {
+    padding: 24px 18px;
+  }
+
+  .cs-pair-card {
+    padding: 22px 18px;
+  }
+
+  /* Differentiators & Services */
+  .diff-card, .service-card {
+    padding: 24px 18px;
+  }
+
+  /* Ideal Client */
+  .ideal-client-card {
+    padding: 24px 18px;
+  }
+
+  .ideal-client-item {
+    font-size: 0.95rem;
+    gap: 12px;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    padding: 40px 20px;
+    border-radius: 16px;
+  }
+
+  .cta-headline {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 48px 0 84px; /* Extra bottom padding for sticky bar */
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  /* Touch Targets */
+  .btn, .nav-link, .dropdown-item {
+    min-height: 44px;
+  }
+
+  /* Mobile Drawer Smoothness */
+  #mobile-drawer {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Sticky Bottom Mobile Bar */
+  .mobile-sticky-bar {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid #e5e7eb;
+    padding: 10px 16px;
+    z-index: 85;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-sticky-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+  .mobile-sticky-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  .mobile-sticky-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #10b981;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .mobile-sticky-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-sticky-btn {
+    min-height: 40px !important;
+    padding: 8px 14px !important;
+    font-size: 0.8125rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+}
