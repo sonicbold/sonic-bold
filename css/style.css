@@ -2258,7 +2258,7 @@ body {
 
 
 /* ==========================================================================
-   MOBILE-FIRST CRO & UX ENHANCEMENTS
+   MOBILE-FIRST CRO & UX ENHANCEMENTS (FIXED)
    ========================================================================== */
 
 /* Prevent iOS Safari Auto-Zoom on Form Inputs */
@@ -2274,140 +2274,9 @@ body {
     font-size: 16px !important; /* iOS Safari threshold */
   }
 
-  /* Compact section padding on mobile for faster reading rhythm */
-  .section {
-    padding: 52px 0;
-  }
-
-  .hero {
-    padding-top: 100px;
-    padding-bottom: 40px;
-  }
-
-  .hero-title {
-    font-size: 2.15rem;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
-    margin-bottom: 16px;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    line-height: 1.55;
-    margin-bottom: 24px;
-  }
-
-  .hero-cta-group {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .hero-cta-group .btn {
-    width: 100%;
-    justify-content: center;
-    min-height: 48px;
-  }
-
-  .hero-card-form {
-    padding: 24px 18px;
-    border-radius: 16px;
-  }
-
-  .hero-form-title {
-    font-size: 1.3rem;
-  }
-
-  /* Trust Strip on mobile */
-  .trust-strip {
-    padding: 16px 0;
-  }
-
-  .trust-strip-inner {
-    gap: 14px 20px;
-    font-size: 0.8125rem;
-    justify-content: flex-start;
-  }
-
-  /* Problem Cards */
-  .problem-card {
-    padding: 22px 18px;
-  }
-
-  /* System Stages */
-  .stage-row, .stage-row.reverse {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .stage-visual {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .floating-ui-card {
-    padding: 18px 14px;
-  }
-
-  /* Case Studies */
-  .cs-feature-left, .cs-feature-right {
-    padding: 24px 18px;
-  }
-
-  .cs-pair-card {
-    padding: 22px 18px;
-  }
-
-  /* Differentiators & Services */
-  .diff-card, .service-card {
-    padding: 24px 18px;
-  }
-
-  /* Ideal Client */
-  .ideal-client-card {
-    padding: 24px 18px;
-  }
-
-  .ideal-client-item {
-    font-size: 0.95rem;
-    gap: 12px;
-  }
-
-  /* CTA Banner */
-  .cta-banner {
-    padding: 40px 20px;
-    border-radius: 16px;
-  }
-
-  .cta-headline {
-    font-size: 1.75rem;
-    line-height: 1.2;
-  }
-
-  .cta-buttons .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Footer */
+  /* Extra bottom padding for sticky bar */
   .footer {
-    padding: 48px 0 84px; /* Extra bottom padding for sticky bar */
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr !important;
-    gap: 32px;
-  }
-
-  /* Touch Targets */
-  .btn, .nav-link, .dropdown-item {
-    min-height: 44px;
-  }
-
-  /* Mobile Drawer Smoothness */
-  #mobile-drawer {
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    padding-bottom: 84px; 
   }
 
   /* Sticky Bottom Mobile Bar */
