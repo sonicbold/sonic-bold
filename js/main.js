@@ -29,6 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const leadForm = document.getElementById('lead-capture-form');
   const successMsg = document.getElementById('form-success-msg');
 
+  // Auto-open modal if hash is #hero-booking-form (for external links)
+  if (window.location.hash === '#hero-booking-form' && modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Remove hash cleanly without jumping
+    history.replaceState(null, null, ' ');
+  }
+
+
   const openModal = (e) => {
     if (e) e.preventDefault();
     if (modal) {
