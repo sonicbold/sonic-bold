@@ -79,9 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       
       const submitBtn = form.querySelector('button[type="submit"]');
+      if (!submitBtn) return;
       const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = 'Submitting Request...';
       submitBtn.disabled = true;
+      const existingErr = form.querySelector('.form-error');
+      if (existingErr) existingErr.style.display = 'none';
 
       const formData = new FormData(form);
 
@@ -91,17 +94,26 @@ document.addEventListener('DOMContentLoaded', () => {
           body: formData
         });
 
-        if (response.ok) {
+        const data = await response.json();
+        if (response.ok && data.success) {
           form.style.display = 'none';
           if (successMsgElement) {
             successMsgElement.style.display = 'block';
           }
           form.reset();
         } else {
-          alert('Something went wrong. Please try again.');
+          const errEl = form.querySelector('.form-error');
+          if (errEl) {
+            errEl.textContent = data.message || 'Something went wrong. Please try again.';
+            errEl.style.display = 'block';
+          }
         }
       } catch (error) {
-        alert('Network error. Please try again.');
+        const errEl = form.querySelector('.form-error');
+          if (errEl) {
+            errEl.textContent = 'Network error. Please check your connection and try again.';
+            errEl.style.display = 'block';
+          }
       } finally {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
@@ -124,7 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Smooth Anchor Link Scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
+      if (this.classList.contains('open-modal-btn')) return;
+    const targetId = this.getAttribute('href');
       if (targetId && targetId !== '#' && !targetId.includes('modal')) {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
