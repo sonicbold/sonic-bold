@@ -9,16 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileDrawer = document.getElementById('mobile-drawer');
 
   if (mobileToggle && mobileDrawer) {
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-controls', 'mobile-drawer');
+
+    const closeMobileMenu = () => {
+      mobileDrawer.style.display = 'none';
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    };
+
     mobileToggle.addEventListener('click', () => {
       const isVisible = mobileDrawer.style.display === 'block';
       mobileDrawer.style.display = isVisible ? 'none' : 'block';
+      mobileToggle.setAttribute('aria-expanded', String(!isVisible));
+      document.body.classList.toggle('menu-open', !isVisible);
     });
 
     // Close drawer when clicking any link inside it
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileDrawer.style.display = 'none';
+        closeMobileMenu();
       });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileDrawer.style.display === 'block') {
+        closeMobileMenu();
+        mobileToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) closeMobileMenu();
     });
   }
 
