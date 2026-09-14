@@ -10,6 +10,10 @@
   <meta property="og:title" content="Sonic Bold &mdash; Google Ads Specialist for Plumbing Companies" />
   <meta property="og:description" content="Founder-led Google Ads management for plumbers. Generate qualified phone calls and fill your dispatch board." />
   <meta property="og:url" content="https://www.sonicbold.com/" />
+  <meta property="og:image" content="https://www.sonicbold.com/images/logo_perfect.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sonic Bold — Google Ads Specialist for Plumbing Companies" />
+  <meta name="twitter:description" content="Founder-led Google Ads management for plumbers. Generate qualified phone calls and fill your dispatch board." />
   
   <link rel="canonical" href="https://www.sonicbold.com/" />
   <link rel="stylesheet" href="css/style.css" />
@@ -18,19 +22,45 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MarketingAgency",
-    "name": "Sonic Bold",
-    "url": "https://www.sonicbold.com/",
-    "logo": "https://www.sonicbold.com/images/logo_perfect.jpg",
-    "description": "Google Ads specialist exclusively for plumbing contractors. Founder-led campaign management, CRO, and booked-job reporting.",
-    "knowsAbout": [
-      "Google Ads for Plumbers",
-      "Local Services Ads for Plumbers",
-      "Plumbing Lead Generation",
-      "Plumbing Landing Page CRO",
-      "Call Tracking for Plumbers"
-    ],
-    "areaServed": "United States"
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://www.sonicbold.com/#organization",
+        "name": "Sonic Bold",
+        "url": "https://www.sonicbold.com/",
+        "logo": "https://www.sonicbold.com/images/logo_perfect.jpg",
+        "description": "Google Ads specialist exclusively for plumbing contractors. Founder-led campaign management, CRO, and booked-job reporting.",
+        "knowsAbout": [
+          "Google Ads for Plumbers",
+          "Local Services Ads for Plumbers",
+          "Plumbing Lead Generation",
+          "Plumbing Landing Page CRO",
+          "Call Tracking for Plumbers"
+        ],
+        "areaServed": {"@type": "Country", "name": "United States"}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.sonicbold.com/#website",
+        "url": "https://www.sonicbold.com/",
+        "name": "Sonic Bold",
+        "publisher": {"@id": "https://www.sonicbold.com/#organization"},
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Do you work only with plumbing companies?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sonic Bold works exclusively with plumbing contractors."}},
+          {"@type": "Question", "name": "How much should a plumbing company spend on Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "For a 1–5 van shop, $1,500 to $3,500 per month is a common starting point, depending on market size, competition, and service area."}},
+          {"@type": "Question", "name": "Do I need a brand new website?", "acceptedAnswer": {"@type": "Answer", "text": "No. Sonic Bold can build a focused landing page for paid campaigns while your existing website remains in place."}},
+          {"@type": "Question", "name": "Do you require long-term contracts?", "acceptedAnswer": {"@type": "Answer", "text": "No. Sonic Bold works month-to-month."}},
+          {"@type": "Question", "name": "Do you charge a percentage of ad spend?", "acceptedAnswer": {"@type": "Answer", "text": "No. Sonic Bold charges a flat monthly management fee, while ad spend is paid directly to Google."}},
+          {"@type": "Question", "name": "How quickly can campaigns launch?", "acceptedAnswer": {"@type": "Answer", "text": "The initial audit, campaign build, tracking setup, and landing page typically take 14 to 21 business days."}},
+          {"@type": "Question", "name": "What happens if I already have Google Ads running?", "acceptedAnswer": {"@type": "Answer", "text": "Sonic Bold audits search-term waste, negative keywords, tracking, and landing-page bottlenecks before recommending changes."}},
+          {"@type": "Question", "name": "Can you manage Local Services Ads too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sonic Bold manages Google Local Services Ads alongside Google Search Ads for plumbing companies."}}
+        ]
+      }
+    ]
   }
   </script>
 </head>
