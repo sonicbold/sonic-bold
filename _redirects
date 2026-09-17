@@ -1,1 +1,11 @@
-https://sonicbold.com/* https://www.sonicbold.com/:splat 301!
+# Cloudflare Pages _redirects only match paths — not hostnames.
+# Domain-level redirects (apex → www, http → https) are NOT supported here.
+# See functions/_middleware.js (in-repo) and the PR for the exact
+# Cloudflare Redirect Rules to add in the dashboard.
+
+# Static rules first (Cloudflare requires this before splat/placeholder rules).
+/index.html / 301
+
+# Pretty-URL canonicalization: 301 .html → extensionless.
+# This upgrades Cloudflare Pages' built-in 307 pretty-URL redirects to 301.
+/*.html /:splat 301
