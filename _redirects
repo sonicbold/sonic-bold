@@ -1,16 +1,12 @@
-# Cloudflare Pages redirects
-# Canonical host: https://www.sonicbold.com
-# Clean extensionless URLs (Cloudflare Pages serves page.html at /page)
-
-# Host consolidation (also enable SSL/TLS → Always Use HTTPS in the Cloudflare dashboard)
-https://sonicbold.com/* https://www.sonicbold.com/:splat 301!
-http://sonicbold.com/* https://www.sonicbold.com/:splat 301!
-http://www.sonicbold.com/* https://www.sonicbold.com/:splat 301!
+# Cloudflare Pages / Workers path redirects
+# Host + HTTPS consolidation cannot live here (Workers rejects host-level
+# rules). Import redirects/cloudflare-bulk-redirects.csv in the Cloudflare
+# dashboard and set Always Use HTTPS + primary host www.sonicbold.com.
 
 # Homepage file → site root
 /index.html / 301!
 
-# Known sitemap paths
+# Known sitemap + new E-E-A-T paths
 /blog.html /blog 301
 /blog-plumbing-missed-calls-lost-jobs.html /blog-plumbing-missed-calls-lost-jobs 301
 /blog-lsa-vs-search-ads-plumbers.html /blog-lsa-vs-search-ads-plumbers 301
