@@ -1,1 +1,32 @@
-https://sonicbold.com/* https://www.sonicbold.com/:splat 301!
+# Cloudflare Pages / Workers path redirects
+# Host + HTTPS consolidation cannot live here (Workers rejects host-level
+# rules). Import redirects/cloudflare-bulk-redirects.csv in the Cloudflare
+# dashboard and set Always Use HTTPS + primary host www.sonicbold.com.
+
+# Homepage file → site root
+/index.html / 301!
+
+# Known sitemap + new E-E-A-T paths
+/blog.html /blog 301
+/blog-plumbing-missed-calls-lost-jobs.html /blog-plumbing-missed-calls-lost-jobs 301
+/blog-lsa-vs-search-ads-plumbers.html /blog-lsa-vs-search-ads-plumbers 301
+/blog-shared-leads-vs-exclusive-plumbing-leads.html /blog-shared-leads-vs-exclusive-plumbing-leads 301
+/blog-get-more-plumbing-leads.html /blog-get-more-plumbing-leads 301
+/blog-lsa-for-plumbers.html /blog-lsa-for-plumbers 301
+/google-ads-for-plumbers.html /google-ads-for-plumbers 301
+/local-services-ads-for-plumbers.html /local-services-ads-for-plumbers 301
+/plumbing-landing-pages.html /plumbing-landing-pages 301
+/plumbing-web-design.html /plumbing-web-design 301
+/ai-receptionist-for-plumbers.html /ai-receptionist-for-plumbers 301
+/google-business-profile-for-plumbers.html /google-business-profile-for-plumbers 301
+/plumbing-call-tracking.html /plumbing-call-tracking 301
+/blog-google-ads-budget-for-plumbers.html /blog-google-ads-budget-for-plumbers 301
+/blog-booked-job-tracking-for-plumbers.html /blog-booked-job-tracking-for-plumbers 301
+/blog-plumbing-ppc-landing-page-checklist.html /blog-plumbing-ppc-landing-page-checklist 301
+/privacy-policy.html /privacy-policy 301
+/terms.html /terms 301
+/about.html /about 301
+/contact.html /contact 301
+
+# Catch-all: any remaining .html → extensionless
+/*.html /:splat 301
