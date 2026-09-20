@@ -183,3 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+  // Contact page form
+  const contactForm = document.getElementById('contact-page-form');
+  const contactSuccess = document.getElementById('contact-form-success');
+  if (contactForm) {
+    handleFormSubmission(contactForm, contactSuccess);
+  }
