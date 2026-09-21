@@ -1955,6 +1955,18 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
+.nav-dropdown.is-open .nav-dropdown-toggle {
+  color: var(--text-primary);
+  background-color: var(--bg-subtle);
+}
+
+.nav-dropdown.is-open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+
 .dropdown-item {
   text-decoration: none;
   color: var(--text-secondary);
@@ -2085,7 +2097,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-dropdown:hover .nav-dropdown-menu {
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown.is-open .nav-dropdown-menu {
     display: none; /* Handled by mobile drawer */
   }
   .nav-dropdown-toggle {
@@ -2571,12 +2584,6 @@ body.menu-open {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Homepage focus: keep the path from problem to proof to action concise. */
-#system,
-#ideal-client {
-  display: none;
 }
 
 /* Long-form service / About / Contact SEO content */

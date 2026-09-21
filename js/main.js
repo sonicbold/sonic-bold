@@ -44,22 +44,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 1b. Services nav dropdown — click/keyboard (+ keep CSS hover as enhancement)
+  const navDropdown = document.querySelector('.nav-dropdown');
+  const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+  const navDropdownMenu = document.querySelector('.nav-dropdown-menu');
+
+  if (navDropdown && navDropdownToggle && navDropdownMenu) {
+    navDropdownToggle.setAttribute('aria-expanded', 'false');
+    if (!navDropdownToggle.getAttribute('aria-haspopup')) {
+      navDropdownToggle.setAttribute('aria-haspopup', 'true');
+    }
+
+    const setDropdownOpen = (open) => {
+      navDropdown.classList.toggle('is-open', open);
+      navDropdownToggle.setAttribute('aria-expanded', String(open));
+    };
+
+    const closeDropdown = () => setDropdownOpen(false);
+
+    navDropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setDropdownOpen(!navDropdown.classList.contains('is-open'));
+    });
+
+    // Close when choosing a link
+    navDropdownMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeDropdown());
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navDropdown.contains(e.target)) closeDropdown();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navDropdown.classList.contains('is-open')) {
+        closeDropdown();
+        navDropdownToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 768) closeDropdown();
+    });
+  }
+
   // 2. Booking Modal Logic
   const modal = document.getElementById('booking-modal');
   const openButtons = document.querySelectorAll('.open-modal-btn');
   const closeButton = document.getElementById('modal-close-btn');
   const leadForm = document.getElementById('lead-capture-form');
   const successMsg = document.getElementById('form-success-msg');
-
-  // Auto-open modal if hash is #hero-booking-form (for external links)
-  if (window.location.hash === '#hero-booking-form' && modal) {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    
-    // Remove hash cleanly without jumping
-    history.replaceState(null, null, ' ');
-  }
-
 
   const openModal = (e) => {
     if (e) e.preventDefault();
@@ -72,15 +107,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     if (modal) {
       modal.classList.remove('active');
-      document.body.style.overflow = '';
-      setTimeout(() => {
-        if (leadForm && successMsg) {
-          leadForm.style.display = 'block';
-          successMsg.style.display = 'none';
-        }
-      }, 300);
     }
+    // Always clear scroll lock (covers hash-open edge cases)
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      if (leadForm && successMsg) {
+        leadForm.style.display = 'block';
+        successMsg.style.display = 'none';
+      }
+    }, 300);
   };
+
+  // Auto-open modal if hash is #hero-booking-form (same path as buttons)
+  if (window.location.hash === '#hero-booking-form' && modal) {
+    openModal();
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
 
   openButtons.forEach(btn => {
     btn.addEventListener('click', openModal);
@@ -98,9 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ESC key to close modal
+  // ESC key to close modal (and always unlock scroll)
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+    if (e.key !== 'Escape' || !modal) return;
+    if (modal.classList.contains('active') || document.body.style.overflow === 'hidden') {
       closeModal();
     }
   });
@@ -183,11 +226,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-
-  // Contact page form
-  const contactForm = document.getElementById('contact-page-form');
-  const contactSuccess = document.getElementById('contact-form-success');
-  if (contactForm) {
-    handleFormSubmission(contactForm, contactSuccess);
-  }

@@ -1,17 +1,30 @@
-# Redirects
+# Redirects (host + HTTPS)
 
 Canonical host: **https://www.sonicbold.com**
-URL pattern: **extensionless** (no `.html`)
 
-## In-repo
+## In-repo (drop-in)
 
-- `/_redirects` — path-only `.html` → clean 301s for Cloudflare Pages / Workers. Host-level rules are omitted here because Workers Builds rejects them.
-- `cloudflare-bulk-redirects.csv` — import in **Cloudflare → Bulk Redirects / Redirect Rules** for HTTP→HTTPS and apex→www.
+- `/_redirects` — path-only `.html` → clean 301s for Cloudflare Pages/Workers, plus `/favicon.ico` → `/favicon.png`.
+- `redirects/cloudflare-bulk-redirects.csv` — import in the Cloudflare dashboard for **HTTP→HTTPS** and **apex→www**.
 
-## Dashboard (required for P0 host consolidation)
+> Cloudflare Pages/Workers `_redirects` cannot express host-level rules. Host consolidation **must** be done in the dashboard (or via Bulk Redirects import).
 
-1. SSL/TLS → Full (strict)
-2. Always Use HTTPS: On
-3. Primary hostname: `www.sonicbold.com`
-4. Import `cloudflare-bulk-redirects.csv`
-5. After redirects are stable 1–2 weeks, enable HSTS (do not add it in HTML yet)
+## Cloudflare dashboard steps (required)
+
+1. **SSL/TLS** → encryption mode **Full (strict)**.
+2. **SSL/TLS → Edge Certificates** → **Always Use HTTPS**: On.
+3. Set primary hostname to **www.sonicbold.com** (Custom Domains / Pages project domains).
+4. **Bulk Redirects** (or Redirect Rules): import `cloudflare-bulk-redirects.csv`.
+   - Expected outcomes:
+     - `http://*` → `https://www.sonicbold.com/...` (301)
+     - `https://sonicbold.com/...` → `https://www.sonicbold.com/...` (301)
+5. After redirects are stable ~1–2 weeks, enable **HSTS** (Edge Certificates → HSTS). Do not add HSTS only in static HTML.
+
+## Verify after deploy
+
+```bash
+curl -sI http://www.sonicbold.com/ | head -5          # expect 301 → https://www...
+curl -sI http://sonicbold.com/ | head -5
+curl -sI https://sonicbold.com/ | head -5             # expect 301 → https://www...
+curl -sI https://www.sonicbold.com/favicon.ico | head -5
+```

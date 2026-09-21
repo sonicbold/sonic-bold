@@ -17,6 +17,7 @@
   <link rel="canonical" href="https://www.sonicbold.com/terms" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </head>
 <body>
 
@@ -210,6 +211,63 @@
       </div>
     </div>
   </footer>
+<!-- BOOKING MODAL -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="hero-form-header">
+        <h3 class="hero-form-title">Get Your Free Google Ads Audit</h3>
+        <p class="hero-form-sub">We'll review your current setup, identify budget leaks, and show you exactly how to capture more qualified calls.</p>
+      </div>
+      
+      <form id="lead-capture-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="1dc563ff-b844-4df1-9254-53dc5b78e3f5" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+        <input type="hidden" name="subject" value="New Google Ads Audit Request - SonicBold" />
+        <input type="hidden" name="from_name" value="SonicBold Modal Form" />
+
+        <div class="form-group-sm">
+          <label class="form-label-sm">Your Name</label>
+          <input type="text" name="Contact Name" class="form-input-sm" placeholder="e.g. Mike Henderson" required />
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group-sm">
+            <label class="form-label-sm">Phone Number</label>
+            <input type="tel" name="Phone" class="form-input-sm" placeholder="(555) 000-0000" required />
+          </div>
+          <div class="form-group-sm">
+            <label class="form-label-sm">Work Email</label>
+            <input type="email" name="Email" class="form-input-sm" placeholder="mike@metroflow.com" required />
+          </div>
+        </div>
+
+        <div class="form-group-sm" style="margin-top:8px;">
+          <label class="a2p-consent-notice">
+            <input type="checkbox" name="SMS Consent" value="Granted" />
+            <span>I agree to receive text messages from Sonic Bold regarding my audit request and service updates. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of purchase. See <a href="privacy-policy">Privacy Policy</a> and <a href="terms">Terms</a>.</span>
+          </label>
+        </div>
+
+        <div class="form-error"></div>
+        
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px; font-size:1rem; font-weight:700; margin-top:8px;">
+          Get My Free Audit
+        </button>
+      </form>
+      
+      <div id="form-success-msg" style="display:none; text-align:center; padding:32px 0;">
+        <div style="width:56px; height:56px; background:#ecfdf5; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:#10b981;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 style="font-size:1.25rem; font-weight:700; color:#111827; margin-bottom:8px;">Audit Request Received!</h3>
+        <p style="font-size:0.9375rem; color:#6b7280; line-height:1.5;">We'll review your Google presence and contact you with clear, actionable insights.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
 
   <!-- MOBILE STICKY ACTION BAR (Visible only on screens <= 768px) -->
   <div class="mobile-sticky-bar" style="display:none;">

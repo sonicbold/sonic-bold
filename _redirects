@@ -30,3 +30,6 @@
 
 # Catch-all: any remaining .html → extensionless
 /*.html /:splat 301
+
+# Favicon fallback for clients that request /favicon.ico first
+/favicon.ico /favicon.png 302
