@@ -3,8 +3,10 @@
 # rules). Import redirects/cloudflare-bulk-redirects.csv in the Cloudflare
 # dashboard and set Always Use HTTPS + primary host www.sonicbold.com.
 
-# Homepage file → site root
-/index.html / 301!
+# Homepage file → site root.
+# Workers static assets always apply _redirects (no Pages "!" force flag).
+# "301!" is rejected: status must be 200, 301, 302, 303, 307, or 308.
+/index.html / 301
 
 # Known sitemap + new E-E-A-T paths
 /blog.html /blog 301
