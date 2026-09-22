@@ -30,6 +30,12 @@
 /about.html /about 301
 /contact.html /contact 301
 
+# Audit aliases → free Google Ads audit page
+/audit /free-google-ads-audit 301
+/audit.html /free-google-ads-audit 301
+/google-ads-audit /free-google-ads-audit 301
+/google-ads-audit.html /free-google-ads-audit 301
+
 # Catch-all: any remaining .html → extensionless
 /*.html /:splat 301
 
