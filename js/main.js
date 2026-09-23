@@ -149,13 +149,60 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Helper function to handle form submission via Web3Forms
+  const SMS_CONSENT_ERROR = 'Please check the SMS consent box to continue, or leave Phone blank if you do not want texts.';
+
+  const showFormError = (form, message) => {
+    const errEl = form.querySelector('.form-error');
+    if (!errEl) return;
+    errEl.textContent = message;
+    errEl.style.display = 'block';
+  };
+
+  // Block when a phone field is present or the SMS consent checkbox exists and is unchecked.
+  const smsConsentMissing = (form) => {
+    const sms = form.querySelector('input[name="SMS Consent"]');
+    const phoneField = form.querySelector('input[type="tel"], input[name="Phone"], input[name="phone"]');
+    if (!sms && !phoneField) return false;
+    return !sms || !sms.checked;
+  };
+
   const handleFormSubmission = (form, successMsgElement) => {
+    const sms = form.querySelector('input[name="SMS Consent"]');
+    // Let this handler run even when the checkbox is required, so the
+    // .form-error message is shown. Other required fields are still checked below.
+    form.noValidate = true;
+    if (sms) {
+      sms.addEventListener('invalid', () => {
+        showFormError(form, SMS_CONSENT_ERROR);
+      });
+      sms.addEventListener('change', () => {
+        if (sms.checked) {
+          const errEl = form.querySelector('.form-error');
+          if (errEl) errEl.style.display = 'none';
+        }
+      });
+    }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const submitBtn = form.querySelector('button[type="submit"]');
       if (!submitBtn) return;
       const originalText = submitBtn.innerHTML;
+
+      if (smsConsentMissing(form)) {
+        showFormError(form, SMS_CONSENT_ERROR);
+        if (sms) sms.focus();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        return;
+      }
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       submitBtn.innerHTML = 'Submitting Request...';
       submitBtn.disabled = true;
       const existingErr = form.querySelector('.form-error');
@@ -196,17 +243,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // 3. Modal Form Submission
-  if (leadForm) {
-    handleFormSubmission(leadForm, successMsg);
-  }
+  // 3. Modal, hero, and contact-page forms (same consent gate + AJAX path)
+  const bindLeadForm = (formId, successId) => {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const successEl = successId ? document.getElementById(successId) : null;
+    handleFormSubmission(form, successEl);
+  };
 
-  // 4. Hero Inline Form Submission
-  const heroForm = document.getElementById('hero-audit-form');
-  const heroSuccess = document.getElementById('hero-form-success');
-  if (heroForm) {
-    handleFormSubmission(heroForm, heroSuccess);
-  }
+  bindLeadForm('lead-capture-form', 'form-success-msg');
+  bindLeadForm('hero-audit-form', 'hero-form-success');
+  bindLeadForm('contact-page-form', 'contact-form-success');
+
+  document.querySelectorAll('form').forEach((form) => {
+    if (form.id === 'lead-capture-form' || form.id === 'hero-audit-form' || form.id === 'contact-page-form') return;
+    const hasSms = form.querySelector('input[name="SMS Consent"]');
+    const hasPhone = form.querySelector('input[type="tel"], input[name="Phone"], input[name="phone"]');
+    if (hasSms || hasPhone) handleFormSubmission(form, null);
+  });
 
   // 5. Smooth Anchor Link Scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
