@@ -2772,3 +2772,156 @@ body.menu-open {
 @media (max-width: 768px) {
   .seo-prose h2 { margin-top: 36px; }
 }
+
+/* ==========================================================================
+   HOMEPAGE — FOUNDER, AFTER DAY 30, CASE-STUDY PROOF
+   ========================================================================== */
+.founder-band {
+  margin-top: -36px;
+  padding: 0 0 20px;
+  background: #ffffff;
+}
+
+.founder-band-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 20px;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  background: var(--bg-subtle);
+}
+
+.founder-photo {
+  width: 88px;
+  height: 106px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center 18%;
+  flex-shrink: 0;
+  border: 1px solid var(--border-light);
+  background: #e5e7eb;
+}
+
+.founder-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.founder-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.founder-bio {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-top: 6px;
+  max-width: 68ch;
+  overflow-wrap: anywhere;
+}
+
+.founder-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.founder-meta a {
+  color: #111827;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.founder-meta a:hover {
+  color: #0284c7;
+}
+
+.founder-about {
+  color: #0284c7 !important;
+}
+
+.cs-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.cs-proof-slot {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px dashed #93c5fd;
+  border-radius: 20px;
+  padding: 3px 8px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.after-30 {
+  margin-top: 28px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.after-30 h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.after-30 p {
+  font-size: 0.9375rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 72ch;
+  overflow-wrap: anywhere;
+}
+
+.footer-address-note {
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: #4b5563;
+  line-height: 1.5;
+  max-width: 36ch;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .founder-band {
+    margin-top: 0;
+    padding: 4px 0 16px;
+  }
+
+  .founder-band-inner {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .founder-photo {
+    width: 72px;
+    height: 86px;
+  }
+
+  .after-30 {
+    padding: 22px 18px;
+  }
+}
