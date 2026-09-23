@@ -42,11 +42,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "isPartOf": {
       "@id": "https://www.sonicbold.com/#website"
     },
-    "about": {
-      "@id": "https://www.sonicbold.com/#organization"
-    },
+    "about": [
+      {"@id": "https://www.sonicbold.com/#organization"},
+      {"@id": "https://www.sonicbold.com/#founder"}
+    ],
     "mainEntity": {
-      "@id": "https://www.sonicbold.com/#organization"
+      "@type": "Person",
+      "@id": "https://www.sonicbold.com/#founder",
+      "name": "Sam",
+      "givenName": "Sam",
+      "jobTitle": "Founder",
+      "telephone": "+1-203-791-3925",
+      "url": "https://www.sonicbold.com/about",
+      "worksFor": {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://www.sonicbold.com/#organization",
+        "name": "Sonic Bold",
+        "url": "https://www.sonicbold.com/",
+        "telephone": "+1-203-791-3925",
+        "email": "contact@sonicbold.com"
+      }
     }
   }
   </script>
@@ -100,6 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
 
       <div class="nav-actions">
+        <a href="tel:+12037913925" class="nav-call" aria-label="Call Sam at +1 203-791-3925"><span class="nav-call-label">Call Sam</span> <span class="nav-call-num">+1 203-791-3925</span></a>
         <a href="/#hero-booking-form" class="btn btn-primary btn-sm open-modal-btn">Get a Free Audit</a>
         <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Open menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -115,6 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- MOBILE DRAWER -->
   <div id="mobile-drawer" style="display:none; background:#ffffff; border-bottom:1px solid #e5e7eb; padding:20px 24px; position:absolute; width:100%; z-index:90; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);">
     <div style="display:flex; flex-direction:column; gap:14px;">
+      <a href="tel:+12037913925" class="nav-link" style="font-size:1.05rem; font-weight:700;">Call Sam: +1 203-791-3925</a>
       <a href="/#how-it-works" class="nav-link" style="font-size:1.05rem; font-weight:600;">How It Works</a>
       <a href="/#results" class="nav-link" style="font-size:1.05rem; font-weight:600;">Results</a>
       
@@ -147,7 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <span class="eyebrow eyebrow-dark">THE COMPANY</span>
         <h1 class="hero-title" style="margin-bottom:20px; font-size:clamp(2.2rem, 4vw, 3.4rem);">About Sonic Bold — Google Ads Built Only for Plumbing Companies</h1>
-        <p class="section-sub" style="margin:0 auto 36px; font-size:1.15rem; line-height:1.7;">A founder-led Google Ads and Local Services Ads specialist. You work with the person managing the account—not a rotating junior reading a multi-trade playbook.</p>
+        <p class="section-sub" style="margin:0 auto 36px; font-size:1.15rem; line-height:1.7;">Sam runs Sonic Bold. You work with the founder on Google Ads and Local Services Ads—not a rotating junior reading a multi-trade playbook.</p>
         <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
           <a href="contact" class="btn btn-primary btn-lg">Contact Sonic Bold</a>
           <a href="/#hero-booking-form" class="btn btn-secondary btn-lg open-modal-btn">Get a Free Audit</a>
@@ -192,8 +209,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><strong>Reporting that matches plumbing</strong> — calls, lead quality, and booked-job economics—not vanity CTR alone</li>
           </ul>
 
-          <h2>How we work with plumbing owners</h2>
-          <p>Sonic Bold is founder-led. Strategy, search-term hygiene, landing-page decisions, and weekly optimization come from the specialist running the work—not a rotating junior reading a multi-trade playbook.</p>
+          <h2>Who you work with</h2>
+          <p>You work with Sam, the founder. Strategy, search-term hygiene, landing-page decisions, and weekly optimization come from Sam—not a rotating junior reading a multi-trade playbook.</p>
+          <p>Call Sam at <a href="tel:+12037913925">+1 203-791-3925</a>.</p>
 
           <h2>Why plumbing-only matters</h2>
           <p>Generalist agencies often recycle the same HVAC and roofing keyword lists into plumbing accounts. Plumbing search behavior is different: emergency urgency, DIY pollution, license and trust signals, and after-hours answer rates decide whether paid demand becomes revenue. Specialization is how negatives, landing pages, LSA disputes, and dispatch workflows get built.</p>
@@ -217,7 +235,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="seo-faq-item">
             <h3>Do I work with a junior account manager?</h3>
-            <p>No. Sonic Bold is founder-led. You work with the person building and managing the campaigns.</p>
+            <p>No. You work with Sam, the founder. Sam builds and manages the campaigns.</p>
           </div>
           <div class="seo-faq-item">
             <h3>Do you require a long-term contract?</h3>
@@ -266,6 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Founder-led &bull; No junior account managers &bull; Direct campaign strategy
           </div>
           <div style="margin-top:14px; font-size:0.875rem; color:#4b5563; line-height:1.6;">
+            <a href="tel:+12037913925" style="color:#111827; font-weight:700;">Call Sam: +1 203-791-3925</a><br />
             <a href="mailto:contact@sonicbold.com" style="color:#111827; font-weight:600;">contact@sonicbold.com</a>
           </div>
         </div>
