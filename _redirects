@@ -17,24 +17,34 @@
 /blog-lsa-for-plumbers.html /blog-lsa-for-plumbers 301
 /google-ads-for-plumbers.html /google-ads-for-plumbers 301
 /local-services-ads-for-plumbers.html /local-services-ads-for-plumbers 301
-/plumbing-landing-pages.html /plumbing-landing-pages 301
 /plumbing-web-design.html /plumbing-web-design 301
 /ai-receptionist-for-plumbers.html /ai-receptionist-for-plumbers 301
-/google-business-profile-for-plumbers.html /google-business-profile-for-plumbers 301
-/plumbing-call-tracking.html /plumbing-call-tracking 301
 /blog-google-ads-budget-for-plumbers.html /blog-google-ads-budget-for-plumbers 301
-/blog-booked-job-tracking-for-plumbers.html /blog-booked-job-tracking-for-plumbers 301
-/blog-plumbing-ppc-landing-page-checklist.html /blog-plumbing-ppc-landing-page-checklist 301
+/free-30-days.html /free-30-days 301
+
+# Retired offers → current Google Ads + LSA management
+/plumbing-landing-pages /google-ads-for-plumbers 301
+/plumbing-landing-pages.html /google-ads-for-plumbers 301
+/plumbing-call-tracking / 301
+/plumbing-call-tracking.html / 301
+/google-business-profile-for-plumbers / 301
+/google-business-profile-for-plumbers.html / 301
+/blog-booked-job-tracking-for-plumbers /blog 301
+/blog-booked-job-tracking-for-plumbers.html /blog 301
+/blog-plumbing-ppc-landing-page-checklist /blog 301
+/blog-plumbing-ppc-landing-page-checklist.html /blog 301
+/free-google-ads-audit /free-30-days 301
+/free-google-ads-audit.html /free-30-days 301
 /privacy-policy.html /privacy-policy 301
 /terms.html /terms 301
 /about.html /about 301
 /contact.html /contact 301
 
-# Audit aliases → free Google Ads audit page
-/audit /free-google-ads-audit 301
-/audit.html /free-google-ads-audit 301
-/google-ads-audit /free-google-ads-audit 301
-/google-ads-audit.html /free-google-ads-audit 301
+# Old audit aliases → free 30 days of Google Ads + LSA management
+/audit /free-30-days 301
+/audit.html /free-30-days 301
+/google-ads-audit /free-30-days 301
+/google-ads-audit.html /free-30-days 301
 
 # Catch-all: any remaining .html → extensionless
 /*.html /:splat 301
