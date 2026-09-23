@@ -5,6 +5,7 @@ Canonical host: **https://www.sonicbold.com**
 ## In-repo (drop-in)
 
 - `/_redirects` — path-only `.html` → clean 301s for Cloudflare Pages/Workers, plus `/favicon.ico` → `/favicon.png`.
+- Short legal paths: `/privacy` → `/privacy-policy` and `/terms-of-service` → `/terms` (also in `cloudflare-bulk-redirects.csv`).
 - Retired paths (`/free-google-ads-audit`, `/audit`, `/plumbing-landing-pages`, `/plumbing-call-tracking`, `/google-business-profile-for-plumbers`, and the booked-job tracking and PPC landing-page posts) 301 to `/free-30-days`, `/google-ads-for-plumbers`, `/`, or `/blog`.
 - `redirects/cloudflare-bulk-redirects.csv` — import in the Cloudflare dashboard for **HTTP→HTTPS** and **apex→www**.
 
