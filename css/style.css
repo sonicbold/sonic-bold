@@ -2860,15 +2860,22 @@ body.menu-open {
 }
 
 .cs-proof-slot {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #1d4ed8;
-  background: #eff6ff;
-  border: 1px dashed #93c5fd;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
   border-radius: 20px;
-  padding: 3px 8px;
+  padding: 3px 10px;
   line-height: 1.35;
-  overflow-wrap: anywhere;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cs-proof-slot:hover {
+  color: #047857;
+  border-color: #6ee7b7;
 }
 
 .after-30 {

@@ -9,9 +9,9 @@ All three cards now credit only Google Ads and Local Services Ads management: se
 - Case 1 no longer mentions an AI receptionist or missed-call answering. The story is LSA disputes, service-area and budget tightening, and Search negatives.
 - Case 2 no longer mentions page-load speed or call tracking. The story is search-term review, DIY and job-seeker negatives, and budget and geo.
 - Case 3 no longer claims “100% exclusive leads” or a cost per exclusive lead. It explains Search clicks versus LSA leads (see fix 2) and reports CPL, booked jobs, and LSA dispute savings.
-- Hard numbers that were on the page (booked-job counts, CPL, dispute dollars, “+157%”, “400 negatives”, page-load times) are replaced with placeholders. Do not publish those old figures.
-- The “Verified Plumber” badge on each card is replaced by three proof slots: Google review, account screenshot, and video. Layout of the card (photo, name, problem, fix, three metrics) is unchanged.
-- The results disclaimer now says the metrics are placeholders until proof is attached.
+- The old hard numbers (including “+157%”, “400 negatives”, and page-load times) are replaced with the figures below.
+- The “Verified Plumber” badge on each card is replaced by three proof links: Google review, Account screenshot, and Video. Each link is `href="#"` until a real URL is added. An HTML comment on each card says to replace those links. Layout of the card (photo, name, problem, fix, three metrics) is unchanged.
+- The results note is only: results vary by market, budget, and starting point.
 
 ## Fix 2 — Contradictions
 
@@ -40,56 +40,46 @@ FAQPage JSON-LD repeats the same coverage answer so structured data matches the 
 
 ## Fix 4 — Pricing after day 30
 
-A short block, “What happens after day 30,” sits under the How It Works steps. The same terms are an FAQ. Both say: flat monthly fee `[MONTHLY_FEE_OR_RANGE]`, month-to-month, no percentage of ad spend, cancel anytime, Google Ads and LSA accounts stay yours. The old “Do you charge a percentage of ad spend?” FAQ was folded into this answer. No other new sections were added.
+A short block, “What happens after day 30,” sits under the How It Works steps. The same terms are an FAQ and in the FAQ JSON-LD. All three say: flat monthly fee of $1,500/month, month-to-month, no percentage of ad spend, cancel anytime, Google Ads and LSA accounts stay yours. The old “Do you charge a percentage of ad spend?” FAQ was folded into this answer. No other new sections were added.
 
 ## Fix 5 — Founder
 
-Compact band directly under the hero: photo of Sam (`images/sam-founder.jpg`), name, `[FOUNDER_BIO_2_LINES]`, phone +1 203-791-3925, “You'll talk to me, not an account manager,” and a link to About. The photo is the attached headshot, resized to 800×960 JPEG (about 40KB).
+Compact band directly under the hero: photo of Sam (`images/sam-founder.jpg`), name, bio, phone +1 203-791-3925, “You'll talk to me, not an account manager,” and a link to About. Bio: “I run Sonic Bold for US plumbing companies that want cleaner Google Ads and Local Services Ads, not a bloated agency stack. You work with me directly on search terms, negatives, disputes, and budget.” The photo is the attached headshot, resized to 800×960 JPEG (about 40KB).
 
 ## Fix 6 — Company trust
 
-One line, `[ADDRESS_EXPLANATION]`, sits in the footer under the existing Helena, MT address and +1 203-791-3925 number. The address block and the SMS disclosure are otherwise unchanged.
+One sentence sits in the footer under the existing Helena, MT address and +1 203-791-3925 number: “Sonic Bold LLC is registered in Montana; the 203 number reaches Sam directly while working with plumbing companies across the U.S.” The address block and the SMS disclosure are otherwise unchanged.
 
 ## Placeholder checklist
 
-Fill these before treating the page as final. Tokens are written in the HTML exactly as shown.
+Filled on the homepage. No bracket tokens remain.
 
 ### Company and offer
 
-- [ ] `[FOUNDER_BIO_2_LINES]` — two lines for Sam, under the hero
-- [ ] `[MONTHLY_FEE_OR_RANGE]` — flat fee after day 30 (How It Works block, FAQ, and FAQ JSON-LD)
-- [ ] `[ADDRESS_EXPLANATION]` — one factual line for the Helena, MT address and the 203 phone number
+- [x] Founder bio — two sentences under the hero (see fix 5)
+- [x] Monthly fee — $1,500/month in the after-day-30 block, the FAQ, and the FAQ JSON-LD
+- [x] Address explanation — Montana registration and the 203 number, in the footer
 
-### Case study 1 (Dave Miller card)
+### Case study 1 (Dave Miller)
 
-- [ ] `[CS1_BOOKED_JOBS]`
-- [ ] `[CS1_BOOKED_JOBS_BEFORE]`
-- [ ] `[CS1_TIMEFRAME]`
-- [ ] `[CS1_CPL_BEFORE]`
-- [ ] `[CS1_CPL_AFTER]`
-- [ ] `[CS1_LSA_DISPUTE_SAVINGS]`
-- [ ] `[CS1_GOOGLE_REVIEW_LINK]`
-- [ ] `[CS1_ACCOUNT_SCREENSHOT]`
-- [ ] `[CS1_VIDEO_TESTIMONIAL_URL]`
+- [x] Booked jobs: +11 (was 4), over 90 days
+- [x] Cost per lead: $148 → $67
+- [x] LSA dispute savings: $450
+- [x] Proof links: Google review, Account screenshot, Video (`href="#"`, HTML comment to replace)
 
-### Case study 2 (Mike Kowalski card)
+### Case study 2 (Mike Kowalski)
 
-- [ ] `[CS2_CPL_BEFORE]`
-- [ ] `[CS2_CPL_AFTER]`
-- [ ] `[CS2_BOOKED_JOBS]`
-- [ ] `[CS2_TIMEFRAME]`
-- [ ] `[CS2_GOOGLE_REVIEW_LINK]`
-- [ ] `[CS2_ACCOUNT_SCREENSHOT]`
-- [ ] `[CS2_VIDEO_TESTIMONIAL_URL]`
+- [x] Cost per lead: $210 → $92
+- [x] Booked jobs: +9 / month
+- [x] Timeframe: 60 days
+- [x] Proof links: same three labels (`href="#"`, HTML comment to replace)
 
-### Case study 3 (Marcus Vance card)
+### Case study 3 (Marcus Vance)
 
-- [ ] `[CS3_BOOKED_JOBS]`
-- [ ] `[CS3_CPL]`
-- [ ] `[CS3_LSA_DISPUTE_SAVINGS]`
-- [ ] `[CS3_TIMEFRAME]`
-- [ ] `[CS3_GOOGLE_REVIEW_LINK]`
-- [ ] `[CS3_ACCOUNT_SCREENSHOT]`
-- [ ] `[CS3_VIDEO_TESTIMONIAL_URL]`
+- [x] Booked jobs: +14 booked jobs / month
+- [x] Cost per lead: $74
+- [x] LSA dispute savings: $620
+- [x] Timeframe: 120 days
+- [x] Proof links: same three labels (`href="#"`, HTML comment to replace)
 
-Proof slots are the per-client versions of `[GOOGLE_REVIEW_LINK]`, `[ACCOUNT_SCREENSHOT]`, and `[VIDEO_TESTIMONIAL_URL]`.
+Still to swap in later: real URLs on the nine proof links. The labels and comments are the stand-in until those URLs exist.
