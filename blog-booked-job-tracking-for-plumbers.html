@@ -46,9 +46,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "datePublished": "2026-09-14",
     "dateModified": "2026-09-20",
     "author": {
-      "@type": "Organization",
-      "name": "Sonic Bold",
-      "url": "https://www.sonicbold.com/"
+      "@type": "Person",
+      "@id": "https://www.sonicbold.com/#founder",
+      "name": "Sam",
+      "url": "https://www.sonicbold.com/about"
     },
     "publisher": {
       "@id": "https://www.sonicbold.com/#organization"
@@ -64,6 +65,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.sonicbold.com/#organization",
+        "name": "Sonic Bold",
+        "legalName": "Sonic Bold LLC",
+        "url": "https://www.sonicbold.com/",
+        "email": "contact@sonicbold.com",
+        "telephone": "+1 203-791-3925",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "55 W 14th St Ste 101",
+          "addressLocality": "Helena",
+          "addressRegion": "MT",
+          "postalCode": "59601-3387",
+          "addressCountry": "US"
+        },
+        "founder": {"@id": "https://www.sonicbold.com/#founder"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.sonicbold.com/#founder",
+        "name": "Sam",
+        "jobTitle": "Founder",
+        "telephone": "+1 203-791-3925",
+        "url": "https://www.sonicbold.com/about",
+        "worksFor": {"@id": "https://www.sonicbold.com/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -73,13 +108,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="header"><div class="container nav-container">
     <a href="/" class="logo"><img src="images/logo_perfect.jpg" alt="Sonic Bold Logo" style="height:36px;width:auto;mix-blend-mode:multiply;" /> Sonic Bold</a>
     <nav class="nav-links"><a href="/#how-it-works" class="nav-link">How It Works</a><a href="/#results" class="nav-link">Results</a><a href="/#faq" class="nav-link">FAQ</a><a href="blog" class="nav-link" style="font-weight:700;color:#111827;">Blog</a><a href="about" class="nav-link">About</a></nav>
-    <a href="/#hero-booking-form" class="btn btn-primary btn-sm open-modal-btn">Get a Free Audit</a>
+    <div class="nav-actions">
+        <a href="tel:+12037913925" class="nav-call" aria-label="Call Sam at +1 203-791-3925"><span class="nav-call-label">Call Sam</span> <span class="nav-call-num">+1 203-791-3925</span></a>
+        <a href="/#hero-booking-form" class="btn btn-primary btn-sm open-modal-btn">Get a Free Audit</a>
+      </div>
   </div></header>
 
   <main style="padding:140px 0 100px;"><article class="container" style="max-width:800px;">
     <p style="color:#0284c7;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;">Revenue &amp; Call Tracking</p>
     <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;color:#111827;line-height:1.12;margin:14px 0 20px;">How to Track Google Ads All the Way to Booked Plumbing Jobs</h1>
-    <p style="color:#6b7280;margin-bottom:42px;">Updated September 14, 2026 &bull; 7-minute read</p>
+    <p style="color:#6b7280;margin-bottom:42px;">By Sam &bull; Updated September 14, 2026 &bull; 7-minute read</p>
 
     <div style="background:#eff6ff;border-left:4px solid #0284c7;border-radius:10px;padding:24px;margin-bottom:42px;"><strong>Quick answer:</strong> Plumbing companies should track the full path from keyword to click, call, qualified lead, booked job, and revenue. Call tracking, form tracking, CRM or dispatch-board status, and consistent source data make that connection possible.</div>
 
@@ -111,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div style="background:#f3f4f6;border-radius:12px;padding:32px;margin-top:56px;text-align:center;"><h2 style="font-size:1.7rem;font-weight:800;color:#111827;margin:0 0 12px;">Turn marketing data into booked-job data</h2><p style="margin-bottom:22px;color:#4b5563;">Sonic Bold helps plumbing companies connect campaigns, calls, and revenue.</p><a href="/#hero-booking-form" class="btn btn-primary">Get My Free Google Ads Audit</a></div>
   </article></main>
-  <footer class="footer"><div class="container"><div class="footer-bottom" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;"><span>&copy; 2026 Sonic Bold LLC. All rights reserved.</span><a href="blog" class="footer-link">More plumbing marketing guides</a></div></div></footer>
+  <footer class="footer"><div class="container"><div style="margin-bottom:20px; font-size:0.875rem; color:#4b5563; line-height:1.6;">Sonic Bold LLC<br />55 W 14th St<br />Ste 101<br />Helena, MT 59601-3387<br />Phone: <a href="tel:+12037913925" style="color:#111827; font-weight:700;">+1 203-791-3925</a> · Email: <a href="mailto:contact@sonicbold.com" style="color:#111827; font-weight:600;">contact@sonicbold.com</a></div><div class="footer-bottom" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;"><span>&copy; 2026 Sonic Bold LLC. All rights reserved.</span><a href="blog" class="footer-link">More plumbing marketing guides</a></div></div></footer>
 
 <!-- BOOKING MODAL -->
   <div class="modal-overlay" id="booking-modal">
