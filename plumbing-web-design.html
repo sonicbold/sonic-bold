@@ -117,6 +117,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.sonicbold.com/#organization",
+        "name": "Sonic Bold",
+        "legalName": "Sonic Bold LLC",
+        "url": "https://www.sonicbold.com/",
+        "email": "contact@sonicbold.com",
+        "telephone": "+1 203-791-3925",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "55 W 14th St Ste 101",
+          "addressLocality": "Helena",
+          "addressRegion": "MT",
+          "postalCode": "59601-3387",
+          "addressCountry": "US"
+        },
+        "founder": {"@id": "https://www.sonicbold.com/#founder"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.sonicbold.com/#founder",
+        "name": "Sam",
+        "jobTitle": "Founder",
+        "telephone": "+1 203-791-3925",
+        "url": "https://www.sonicbold.com/about",
+        "worksFor": {"@id": "https://www.sonicbold.com/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -167,6 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
 
       <div class="nav-actions">
+        <a href="tel:+12037913925" class="nav-call" aria-label="Call Sam at +1 203-791-3925"><span class="nav-call-label">Call Sam</span> <span class="nav-call-num">+1 203-791-3925</span></a>
         <a href="/#hero-booking-form" class="btn btn-primary btn-sm open-modal-btn">Get a Free Audit</a>
         <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Open menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -182,6 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- MOBILE DRAWER -->
   <div id="mobile-drawer" style="display:none; background:#ffffff; border-bottom:1px solid #e5e7eb; padding:20px 24px; position:absolute; width:100%; z-index:90; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);">
     <div style="display:flex; flex-direction:column; gap:14px;">
+      <a href="tel:+12037913925" class="nav-link" style="font-size:1.05rem; font-weight:700;">Call Sam: +1 203-791-3925</a>
       <a href="/#how-it-works" class="nav-link" style="font-size:1.05rem; font-weight:600;">How It Works</a>
       <a href="/#results" class="nav-link" style="font-size:1.05rem; font-weight:600;">Results</a>
       
@@ -370,7 +406,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Founder-led &bull; No junior account managers &bull; Direct campaign strategy
           </div>
           <div style="margin-top:14px; font-size:0.875rem; color:#4b5563; line-height:1.6;">
-            <a href="mailto:contact@sonicbold.com" style="color:#111827; font-weight:600;">contact@sonicbold.com</a>
+            Sonic Bold LLC<br />
+            55 W 14th St<br />
+            Ste 101<br />
+            Helena, MT 59601-3387<br />
+            Phone: <a href="tel:+12037913925" style="color:#111827; font-weight:700;">+1 203-791-3925</a> · Email: <a href="mailto:contact@sonicbold.com" style="color:#111827; font-weight:600;">contact@sonicbold.com</a>
           </div>
         </div>
         

@@ -47,6 +47,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.sonicbold.com/#organization",
+        "name": "Sonic Bold",
+        "legalName": "Sonic Bold LLC",
+        "url": "https://www.sonicbold.com/",
+        "email": "contact@sonicbold.com",
+        "telephone": "+1 203-791-3925",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "55 W 14th St Ste 101",
+          "addressLocality": "Helena",
+          "addressRegion": "MT",
+          "postalCode": "59601-3387",
+          "addressCountry": "US"
+        },
+        "founder": {"@id": "https://www.sonicbold.com/#founder"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.sonicbold.com/#founder",
+        "name": "Sam",
+        "jobTitle": "Founder",
+        "telephone": "+1 203-791-3925",
+        "url": "https://www.sonicbold.com/about",
+        "worksFor": {"@id": "https://www.sonicbold.com/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
