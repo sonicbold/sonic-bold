@@ -77,7 +77,7 @@
 | Send SMS before A2P approval | Wait for full carrier approval |
 | Deploy without updating legal pages | Update Privacy & Terms first |
 | Skip testing locally | Test forms, mobile, all browsers |
-| Pre-check the SMS consent box | Keep it unchecked (required field) |
+| Pre-check the SMS consent box | Keep it unchecked (optional; not required to submit) |
 | Ignore STOP requests | Honor immediately (instant opt-out) |
 | Send to anyone who didn't opt in | Only message people who checked box |
 

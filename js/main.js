@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeDropdown = () => setDropdownOpen(false);
 
     navDropdownToggle.addEventListener('click', (e) => {
+      const href = navDropdownToggle.getAttribute('href') || '';
+      if (navDropdownToggle.tagName === 'A' && href.indexOf('/services') !== -1) return;
       e.preventDefault();
       e.stopPropagation();
       setDropdownOpen(!navDropdown.classList.contains('is-open'));
@@ -148,6 +150,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // SMS consent is optional. Always send the field to Web3Forms, including when unchecked.
+  const ensureSmsConsentValue = (form) => {
+    const box = form.querySelector('input[type="checkbox"][name="SMS Consent"]');
+    if (!box || box.disabled) return;
+    let fallback = form.querySelector('input[type="hidden"][data-sms-consent-fallback]');
+    if (!fallback) {
+      fallback = document.createElement('input');
+      fallback.type = 'hidden';
+      fallback.name = 'SMS Consent';
+      fallback.setAttribute('data-sms-consent-fallback', '');
+      form.appendChild(fallback);
+    }
+    if (box.checked) {
+      fallback.disabled = true;
+    } else {
+      fallback.disabled = false;
+      fallback.value = 'Not granted';
+    }
+  };
+
+  document.querySelectorAll('form').forEach((form) => {
+    form.addEventListener('submit', () => ensureSmsConsentValue(form), true);
+  });
+
   // Helper function to handle form submission via Web3Forms
   const handleFormSubmission = (form, successMsgElement) => {
     form.addEventListener('submit', async (e) => {
@@ -161,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const existingErr = form.querySelector('.form-error');
       if (existingErr) existingErr.style.display = 'none';
 
+      ensureSmsConsentValue(form);
       const formData = new FormData(form);
 
       try {

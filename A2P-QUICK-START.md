@@ -86,24 +86,24 @@ Once your brand is approved:
 
    **Campaign Description:**
    ```
-   B2B marketing and customer service text messages for plumbing contractor clients. Messages include appointment confirmations, marketing audit scheduling, campaign performance updates, service promotions, and account notifications. All recipients explicitly opt-in via required checkbox consent on our website forms.
+   Text messages for plumbing contractor clients who opt in. Messages are about the free audit / free 30 days and occasional updates. Message frequency varies. Consent is optional and is not required to submit a form. Recipients opt in via an unchecked-by-default checkbox on our website forms.
    ```
 
    **Message Flow Description:**
    ```
-   1. User submits contact form on sonicbold.com
-   2. User must check SMS consent checkbox (required field)
-   3. We send appointment confirmation via SMS
-   4. We send service updates and marketing offers (2-4x/month)
+   1. User submits a form on sonicbold.com
+   2. SMS consent checkbox is optional and unchecked by default
+   3. If they opt in, we may text about the free audit / free 30 days and occasional updates
+   4. Message frequency varies
    5. User can opt out anytime by replying STOP
    6. User can get help by replying HELP
    ```
 
 5. **Provide Sample Messages**
 
-   **Sample 1 (Appointment Confirmation):**
+   **Sample 1 (Free audit / free 30 days):**
    ```
-   Hi Dave, your free marketing audit is confirmed for Tues 3/15 at 2pm. We'll review your Google Ads + website. Reply CONFIRM. Questions? Call 203-791-3925. Reply STOP to opt out.
+   Hi Dave, Sonic Bold here. Thanks for asking about your free audit / free 30 days. We'll call to confirm fit. Msg frequency varies. Reply STOP to opt out or HELP for help. 203-791-3925.
    ```
 
    **Sample 2 (Service Update):**
@@ -124,7 +124,7 @@ Once your brand is approved:
    - [x] Account Notifications
    
    **Opt-In Method:**
-   - [x] Website Form (with required checkbox)
+   - [x] Website Form (optional checkbox, unchecked by default)
    
    **Opt-Out Method:**
    - [x] Reply STOP to any message
@@ -222,7 +222,7 @@ Sonic Bold - Marketing services for plumbers. For help, call 203-791-3925 or ema
 #### START Keyword (Optional but recommended)
 When someone texts "START" after opting out:
 ```
-You have been re-subscribed to Sonic Bold text messages. You'll receive appointment confirmations and updates 2-4x/month. Reply STOP anytime to opt out or HELP for assistance.
+You have been re-subscribed to Sonic Bold text messages about your free audit / free 30 days and occasional updates. Message frequency varies. Reply STOP anytime to opt out or HELP for assistance.
 ```
 
 **Use automation tools:**

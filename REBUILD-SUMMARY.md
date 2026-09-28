@@ -10,10 +10,10 @@ Your website has been fully rebuilt with A2P 10DLC compliance, expanded service 
 ### 1. **A2P 10DLC Full Compliance** ✅
 
 #### Form Consent (All Forms Updated)
-- **Required checkbox** for SMS consent (cannot be bypassed)
+- **Optional checkbox** for SMS consent (unchecked by default; not required to submit)
 - **Comprehensive consent language** meeting carrier requirements
 - Explicit disclosure of:
-  - Message types (marketing, appointments, updates)
+  - Message types (free audit / free 30 days and occasional updates)
   - Message frequency
   - Cost (msg & data rates)
   - STOP keyword instructions
@@ -137,7 +137,7 @@ All data, testimonials, and results kept exactly as they were.
 Both now include:
 - Updated heading "Free Marketing Audit"
 - A2P 10DLC compliant consent language
-- Required checkbox validation
+- Optional SMS checkbox (forms submit if it is unchecked)
 - Clear success messages
 
 ### 7. **Mobile Optimization** ✅
@@ -261,7 +261,7 @@ Before going live with SMS:
 
 ### Website Compliance ✅ (DONE)
 - [x] Explicit checkbox opt-in on all forms
-- [x] Required checkbox (cannot bypass)
+- [x] Optional checkbox (not required to submit)
 - [x] Clear consent language
 - [x] STOP keyword instructions
 - [x] HELP keyword instructions

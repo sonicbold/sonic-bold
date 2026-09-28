@@ -68,7 +68,7 @@ See **A2P-QUICK-START.md** for detailed steps.
 
 Before deploying:
 - [ ] Open index.html in browser
-- [ ] Test forms (try without checkbox → should fail)
+- [ ] Test forms (unchecked SMS box → should still submit)
 - [ ] Test forms (with checkbox → should work)
 - [ ] Check mobile view
 - [ ] Verify all links work
@@ -93,7 +93,7 @@ Follow complete steps in **DEPLOYMENT-CHECKLIST.md**
 ### A2P 10DLC Compliance
 
 Every form now includes:
-- ✅ **Required checkbox** for SMS consent
+- ✅ **Optional checkbox** for SMS consent (unchecked by default; not required to submit)
 - ✅ Explicit opt-in language
 - ✅ STOP keyword instructions
 - ✅ HELP keyword instructions  
@@ -178,7 +178,7 @@ Missing disclosures = TCPA violation risk
 
 ### Conversions
 - **Broader appeal** - Now attracting businesses looking for complete marketing
-- **More qualified leads** - Required checkbox filters out casual inquiries
+- **Optional SMS consent** - The checkbox is not required to submit a form
 - **Higher trust** - Professional A2P compliance
 
 ### Compliance
@@ -193,7 +193,7 @@ Missing disclosures = TCPA violation risk
 ### Forms
 - Hero form (homepage)
 - Modal popup form
-- Both require SMS consent checkbox
+- Both include an optional SMS consent checkbox
 - Both submit to Web3Forms: `1dc563ff-b844-4df1-9254-53dc5b78e3f5`
 
 ### Analytics

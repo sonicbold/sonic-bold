@@ -91,6 +91,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero h1 em{font-style:normal;display:inline-block;background:var(--yellow);color:var(--navy-dk);padding:0 12px;margin-top:8px;text-shadow:none;transform:skewX(-6deg)}
 .lede{font-size:1.18rem;color:#EAF1FB;max-width:36em;margin-bottom:28px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-alt{margin-top:14px;font-size:1.05rem}
+.hero-alt a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.hero-alt a:hover{color:var(--yellow)}
 .hero-phone{display:inline-flex;align-items:center;gap:14px;margin-top:24px;color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;font-size:2.1rem;line-height:1}
 .hero-phone .ic{width:52px;height:52px;padding:12px;background:var(--orange);color:var(--navy-dk);border-radius:50%;box-shadow:0 0 0 5px rgba(255,255,255,.2)}
 .hero-phone span{display:flex;flex-direction:column;gap:4px}
@@ -158,6 +161,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .offer h2 .u-copper{display:inline;background:linear-gradient(transparent 62%,var(--yellow) 62%);color:var(--orange-btn)}
 .offer-lede{font-size:1.18rem;color:var(--muted);max-width:38em}
 .offer-lede strong{color:var(--navy)}
+.offer-clock{margin-top:14px;max-width:38em;font-weight:700;color:var(--navy)}
 .guarantees{display:grid;gap:10px}
 .guarantees li{display:flex;gap:14px;align-items:center;background:var(--blue-lt);border-left:6px solid var(--blue);border-radius:4px;padding:14px 16px}
 .g-icon{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff}
@@ -420,6 +424,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .hero h1{font-size:2.6rem}
   .sticker{font-size:.92rem;padding:5px 10px}
   .hero-ctas .btn{width:100%}
+  .hero-assurances{flex-direction:column;align-items:flex-start;gap:10px}
   .hero-phone{font-size:1.75rem}
   .hero-phone .ic{width:46px;height:46px;padding:11px}
   .hero-proof{grid-template-columns:1fr}
@@ -535,12 +540,37 @@ ul,ol{margin:0;padding:0;list-style:none}
 .company-lines .ic{color:var(--blue);width:22px;height:22px}
 .company-lines a{color:var(--navy);text-decoration:none;font-weight:700}
 .nav-links a[aria-current="page"]{border-color:var(--orange)}
+.footer-title a{color:inherit;text-decoration:none}
+.footer-group{margin-top:12px;font-family:var(--cond);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.footer-links .footer-group:first-of-type{margin-top:0}
+
+.services-page{background:var(--gray);padding:48px 0 72px}
+.services-intro{max-width:40em;margin-bottom:32px}
+.services-intro h1{font-size:clamp(2.4rem,5vw,4.1rem);color:var(--navy);line-height:1.02;margin-bottom:12px}
+.services-intro p{font-size:1.12rem;color:var(--muted)}
+.svc-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.svc-col{background:#fff;border:3px solid var(--navy);border-radius:var(--r);padding:28px 26px 10px;box-shadow:var(--shadow)}
+.svc-col-now{border-top:8px solid var(--orange)}
+.svc-col-later{border-top:8px solid var(--blue)}
+.svc-col h2{font-size:clamp(2rem,3vw,2.7rem);color:var(--navy);margin-bottom:6px}
+.svc-sub{color:var(--muted);font-size:1.05rem;margin-bottom:8px}
+.svc-item{padding:18px 0;border-top:1px solid var(--line)}
+.svc-item h3{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:1.35rem;color:var(--navy);margin-bottom:6px}
+.free-sticker{font-family:var(--cond);font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;background:var(--yellow);color:var(--navy-dk);padding:2px 8px;border:2px solid var(--navy-dk);border-radius:3px}
+.svc-item p{color:var(--muted);margin-bottom:8px}
+.svc-item a{font-family:var(--cond);font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--blue);text-decoration:none}
+.svc-item a:hover{color:var(--orange-btn)}
 
 @media (max-width:1100px){
   .team-strip,.role-grid,.stats{grid-template-columns:1fr 1fr}
   .case-trio{grid-template-columns:1fr}
   .story-layout{grid-template-columns:1fr;gap:28px}
   .values-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:800px){
+  .svc-split{grid-template-columns:1fr}
+  .services-page{padding:32px 0 56px}
+  .svc-col{padding:22px 18px 8px}
 }
 @media (max-width:720px){
   .team-strip,.role-grid,.values-grid{grid-template-columns:1fr}
