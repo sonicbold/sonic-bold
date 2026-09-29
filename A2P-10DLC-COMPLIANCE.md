@@ -21,9 +21,9 @@
 **Mixed Marketing & Customer Care**
 
 We send text messages for:
-1. **Marketing** - Service promotions, new offerings, industry insights
-2. **Customer Care** - Appointment confirmations, audit schedule notifications
-3. **Account Notifications** - Important updates about services
+1. **Free audit / free 30 days** - Information about a requested free audit or free 30 days of management
+2. **Occasional updates** - Occasional updates from Sonic Bold
+3. Message frequency varies. Consent is optional and is not required to submit a form.
 
 ---
 
@@ -31,19 +31,14 @@ We send text messages for:
 
 ### Sample Messages
 
-**Marketing:**
+**Free audit / free 30 days:**
 ```
-Hi [Name], Sonic Bold here! New special: Free Google Ads audit for plumbing contractors. Get a detailed review of your campaigns. Reply YES to schedule or STOP to opt out.
-```
-
-**Appointment Confirmation:**
-```
-[Name], your free marketing audit is scheduled for [Date] at [Time]. We'll review your Google Ads, website, and SEO. Reply CONFIRM or call us at 203-791-3925.
+Hi [Name], Sonic Bold here. Thanks for asking about your free audit / free 30 days. We'll follow up with next steps. Msg frequency varies. Reply STOP to opt out or HELP for help.
 ```
 
-**Service Update:**
+**Occasional update:**
 ```
-Quick update on your campaign, [Name]. We've increased your qualified leads by 30% this month. Check your dashboard or reply INFO for details. Text STOP to opt out.
+Sonic Bold here, [Name]. A quick update on your Google Ads and LSA. Questions? Call 203-791-3925. Reply STOP to opt out or HELP for help.
 ```
 
 ---
@@ -55,10 +50,10 @@ Quick update on your campaign, [Name]. We've increased your qualified leads by 3
 All SMS consent is collected through **explicit checkbox opt-in** on web forms:
 
 #### Consent Language (Exact text from forms):
-> **SMS/Text Message Consent (Required):** By checking this box and providing your phone number, you expressly consent to receive text messages (SMS) from Sonic Bold at the number provided. Messages may include appointment confirmations, service updates, marketing offers, and account notifications. Message frequency varies. Message and data rates may apply. You may opt out at any time by replying STOP to any message. Reply HELP for assistance. Consent is not a condition of purchase. See our Privacy Policy and Terms of Service for more information.
+> Yes, text me about my free audit / free 30 days and occasional updates from Sonic Bold. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is optional and not required to submit this form. See our Privacy Policy and Terms.
 
 #### Key Compliance Elements:
-- ✅ Explicit checkbox required (cannot submit without checking)
+- ✅ Optional checkbox (unchecked by default; forms submit without it)
 - ✅ Clear description of message types
 - ✅ Message frequency disclosure
 - ✅ Cost disclosure (msg & data rates)
@@ -109,8 +104,8 @@ Sonic Bold - Marketing services for plumbers. For help, call 203-791-3925 or ema
 
 Located in the website footer (visible on all pages):
 
-> **A2P 10DLC SMS Compliance:**  
-> By providing your phone number and consenting via checkbox on our forms, you agree to receive text messages (SMS/MMS) from Sonic Bold, including appointment reminders, marketing promotions, and service updates. Message frequency varies by your engagement. Standard message and data rates may apply from your carrier. You may opt out at any time by replying **STOP** to any message or by contacting us. Reply **HELP** for assistance. Consent is not required as a condition of purchase. Messages sent by Sonic Bold LLC, Helena, MT. For full details, see our Privacy Policy and Terms of Service.
+> **SMS Disclosure:**  
+> Text messages from Sonic Bold are optional. If you opt in, we may text you about your free audit / free 30 days and occasional updates. Message frequency varies. Message and data rates may apply. Reply **STOP** to opt out or **HELP** for help. Consent is not required to submit a form. See our Privacy Policy and Terms.
 
 ---
 
@@ -132,7 +127,7 @@ Both documents include:
 
 ### Opt-In ✅
 - [x] Clear, affirmative consent before sending
-- [x] Checkbox required on all forms
+- [x] Checkbox optional on all forms (not required to submit)
 - [x] Cannot be pre-checked
 - [x] Explicit consent language visible
 - [x] Message types described
@@ -173,11 +168,11 @@ When registering with The Campaign Registry (TCR):
 **Professional Services - Marketing**
 
 ### Campaign Description
-Marketing and customer service text messages for B2B plumbing contractor clients. Messages include appointment confirmations, campaign performance updates, service promotions, and account notifications. All recipients explicitly opt-in via checkbox consent on our website.
+Text messages for B2B plumbing contractor clients who opt in. Messages are about the free audit / free 30 days and occasional updates. Message frequency varies. Consent is optional and is not required to submit a form. Recipients opt in via an unchecked-by-default checkbox on our website.
 
 ### Sample Message #1
 ```
-Hi Dave, your free marketing audit is confirmed for Tues 3/15 at 2pm. We'll review your Google Ads + website. Reply CONFIRM. Questions? Call 203-791-3925. Reply STOP to opt out.
+Hi Dave, Sonic Bold here. Thanks for asking about your free audit / free 30 days. We'll call to confirm fit. Msg frequency varies. Reply STOP to opt out or HELP for help. 203-791-3925.
 ```
 
 ### Sample Message #2
