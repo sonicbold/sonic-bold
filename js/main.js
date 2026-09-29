@@ -235,7 +235,14 @@ document.addEventListener('DOMContentLoaded', () => {
     handleFormSubmission(heroForm, heroSuccess);
   }
 
-  // 5. Smooth Anchor Link Scrolling
+  // 5. Contact page form (separate from the shared booking modal)
+  const contactForm = document.getElementById('contact-page-form');
+  const contactSuccess = document.getElementById('contact-form-success');
+  if (contactForm) {
+    handleFormSubmission(contactForm, contactSuccess);
+  }
+
+  // 6. Smooth Anchor Link Scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       if (this.classList.contains('open-modal-btn')) return;

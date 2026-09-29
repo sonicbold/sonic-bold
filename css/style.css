@@ -2456,6 +2456,13 @@ body.menu-open {
     padding-inline: 18px;
   }
 
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    height: auto;
+  }
+
   .header { height: 64px; }
   .logo { gap: 8px; font-size: 1.1rem; }
   .logo img { height: 30px !important; }
