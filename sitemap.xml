@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://www.sonicbold.com/contact</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -112,12 +112,17 @@
   </url>
   <url>
     <loc>https://www.sonicbold.com/privacy-policy</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.sonicbold.com/terms</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.sonicbold.com/sms-opt-in</loc>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
