@@ -2,6 +2,13 @@
    Palette: Truck navy #0B3A75, Royal blue #1557B0, Safety orange #F26B1D (button fill #C94F0C for AA with white text),
             Highlight yellow #FFC61A, white / light gray #F2F4F7 surfaces
    Type: Oswald (headlines), Barlow Condensed (tags/labels), Barlow (body) */
+/* Self-hosted fonts (latin subset), font-display:swap */
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-400.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-600.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/barlow-700.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/barlow-condensed-700.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/barlow-condensed-800.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/oswald-700.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 :root{
   --navy:#0B3A75; --navy-dk:#082B57; --blue:#1557B0; --blue-lt:#E6EEF9;
   --orange:#F26B1D; --orange-btn:#C94F0C; --orange-btn-hi:#A94208; --orange-lt:#FDEBDD;
@@ -75,7 +82,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* Hero: truck-blue livery */
 .hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;padding:64px 0 76px}
 .livery{position:absolute;inset:0;pointer-events:none}
-.livery span{position:absolute;top:-20%;bottom:-20%;transform:skewX(-22deg)}
+/* fixed-height stripes: no resize (CLS) when web fonts change hero height */
+.livery{contain:strict}
+.livery span{position:absolute;top:-120px;height:1800px;transform:skewX(-22deg);transform-origin:50% 420px}
 .livery span:nth-child(1){right:22%;width:120px;background:var(--navy)}
 .livery span:nth-child(2){right:calc(22% - 44px);width:26px;background:var(--orange)}
 .livery span:nth-child(3){right:calc(22% - 80px);width:12px;background:var(--yellow)}
@@ -590,3 +599,10 @@ ul,ol{margin:0;padding:0;list-style:none}
 .form-success{display:none;text-align:center;padding:12px 4px 8px}
 .form-success h3{color:var(--navy);font-size:1.45rem;margin-bottom:8px}
 .form-success p{color:var(--muted);font-size:.98rem}
+
+/* Stat counters: reserve width so number changes / font swaps don't shift layout */
+.proof-num,.stat-num,.result-num,.case-stat,.leak-num,[class*="-num"]{font-variant-numeric:tabular-nums}
+/* Tap targets >= 24px */
+.footer-links a{display:inline-block;min-height:24px;padding:2px 0}
+.consent input{width:24px;height:24px;min-width:24px}
+.founder-photo picture{display:block}

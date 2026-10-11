@@ -1,0 +1,86 @@
+/* Sonic Bold — content styles for inner pages moved onto the redesign shell.
+   Loaded after redesign.css. Restyles legacy content classes in the trades palette. */
+main#main{display:block}
+.container{width:min(1200px,100% - 48px);margin-inline:auto}
+.container-narrow{max-width:860px}
+main .section{padding:72px 0}
+main section.section[style*="padding-top:140px"],main section.section[style*="padding-top: 140px"]{padding-top:64px!important}
+main[style*="padding-top"]{padding-top:56px!important}
+main[style*="padding:140px"]{padding-top:56px!important}
+main h1,main h2,main h3{color:var(--navy)}
+main h1{font-size:clamp(2.1rem,5vw,3.4rem)!important;font-weight:700!important;letter-spacing:.005em!important;line-height:1.08!important}
+main h2{font-weight:700!important;letter-spacing:.005em!important;line-height:1.12!important}
+main h3{font-family:var(--cond);font-weight:800!important;text-transform:uppercase;letter-spacing:.02em;line-height:1.2}
+main p,main li{color:var(--text)}
+main a{color:var(--blue)}
+main a.btn{color:#fff}
+main article ul,main article ol,.seo-prose ul,.seo-prose ol{list-style:disc;padding-left:1.3em;margin:0 0 1.2em}
+main article ol,.seo-prose ol{list-style:decimal}
+main article li,.seo-prose li{margin-bottom:.45em}
+main article p,.seo-prose p{margin:0 0 1.1em}
+.hero-title{color:var(--navy)}
+.section-headline{font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--navy);margin-bottom:12px}
+.section-sub{color:var(--muted)!important;max-width:44em}
+.seo-breadcrumb{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:.95rem;margin-bottom:18px;color:var(--muted)}
+.seo-breadcrumb a{color:var(--blue);font-weight:600;padding:2px 0}
+.eyebrow-dark{background:var(--yellow);color:var(--navy)}
+.seo-prose{max-width:780px;margin-inline:auto;font-size:1.06rem}
+.seo-prose h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:44px 0 16px}
+.seo-prose h3{font-size:1.25rem;margin:28px 0 10px}
+.seo-faq{display:grid;gap:12px;max-width:860px;margin-inline:auto}
+.seo-faq-item{background:#fff;border:2px solid var(--line);border-left:6px solid var(--blue);border-radius:4px;padding:18px 22px}
+.seo-faq-item h3{font-size:1.2rem;margin-bottom:6px}
+.seo-faq-item p{color:var(--muted);margin:0}
+.related-guides{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:24px}
+.related-guides a{display:block;background:var(--gray);border:2px solid var(--line);border-bottom:4px solid var(--orange);border-radius:4px;padding:16px 18px;text-decoration:none;font-family:var(--cond);font-weight:800;font-size:1.15rem;text-transform:uppercase;color:var(--navy)}
+.related-guides a span{display:block;font-family:var(--body);font-weight:500;font-size:.92rem;text-transform:none;color:var(--muted);margin-top:4px}
+.btn-primary{background:var(--orange-btn);color:#fff;box-shadow:0 4px 0 #8A3606}
+.btn-primary:hover{background:var(--orange-btn-hi)}
+.btn-secondary{background:#fff;color:var(--navy)!important;border-color:var(--navy)}
+.btn-white{background:#fff;color:var(--navy)!important}
+.cta-banner{position:relative;overflow:hidden;background:var(--navy);color:#fff;border-radius:var(--r);border-bottom:6px solid var(--orange);padding:56px 28px;text-align:center}
+.cta-banner-glow{display:none}
+.cta-banner .eyebrow{background:none;color:var(--yellow)!important;padding:0}
+.cta-headline{color:#fff!important;font-size:clamp(1.9rem,4vw,3rem);margin-bottom:12px}
+.cta-sub{color:#D6E1F2!important;max-width:40em;margin:0 auto 24px}
+.cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.article-cta{background:var(--blue-lt);border:2px solid var(--blue);border-left:8px solid var(--orange);border-radius:var(--r);padding:26px 24px;margin:36px 0}
+.article-cta h2{font-size:1.6rem!important;margin:0 0 8px!important}
+.article-cta p{color:var(--text)}
+.article-cta .btn{margin-top:6px}
+.keep-reading{border-top:4px solid var(--blue);margin-top:44px;padding-top:24px}
+.keep-reading h2{font-size:1.5rem!important;margin:0 0 12px!important}
+.keep-reading ul{list-style:none!important;padding:0!important;display:grid;gap:6px}
+.keep-reading a{display:inline-block;padding:4px 0;font-weight:700}
+.contact-detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:28px}
+.contact-detail-card{background:#fff;border:2px solid var(--line);border-top:5px solid var(--blue);border-radius:4px;padding:18px}
+.contact-detail-card h2,.contact-detail-card h3{font-family:var(--cond);font-size:1.05rem!important;letter-spacing:.06em!important;text-transform:uppercase;color:var(--orange-btn)!important;margin:0 0 6px!important}
+.contact-detail-card p{margin:0;color:var(--text);font-weight:600;overflow-wrap:anywhere}
+/* forms */
+.form-group-sm{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.form-label-sm{font-family:var(--cond);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--navy)}
+.form-input-sm,main select,main textarea{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:2px solid var(--line);border-radius:4px;background:#fff;color:var(--text)}
+.form-input-sm:focus{border-color:var(--blue);outline:none}
+.a2p-consent-notice{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;line-height:1.5;color:#3B4553;background:var(--gray);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:4px;padding:12px;font-weight:400;text-transform:none;letter-spacing:0}
+.a2p-consent-notice input{margin-top:2px;width:24px;height:24px;min-width:24px;flex:none;accent-color:var(--blue)}
+.a2p-consent-notice a{color:var(--blue);font-weight:700}
+.consent input{width:24px;height:24px;min-width:24px}
+.form-error{display:none;color:#B42318;font-weight:600;margin:6px 0}
+.hidden{display:none!important}
+/* booking modal */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(8,43,87,.7);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .2s}
+.modal-overlay.active{opacity:1;visibility:visible}
+.modal-card{position:relative;background:#fff;border-radius:var(--r);border-top:6px solid var(--orange);width:min(520px,100%);max-height:92vh;overflow:auto;padding:28px 22px}
+.modal-close{position:absolute;top:8px;right:10px;width:40px;height:40px;border:0;background:none;font-size:1.8rem;line-height:1;cursor:pointer;color:var(--navy)}
+.hero-form-title{font-size:1.6rem;color:var(--navy);margin-bottom:6px}
+.hero-form-sub{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+/* footer tap targets */
+.footer-links a{display:inline-block;min-height:24px;padding:2px 0}
+@media (max-width:720px){
+  main .section{padding:48px 0}
+  .container{width:min(1200px,100% - 32px)}
+  main h2[style*="2rem"]{font-size:1.6rem!important}
+  .modal-card div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  main div[style*="grid-template-columns:1fr 1fr"],main div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+}
+main [style*="Plus Jakarta"],main article{font-family:var(--body)!important}
