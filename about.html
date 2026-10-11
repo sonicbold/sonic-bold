@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T854R3X2');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) — GT-T56JMPWJ includes GA4 G-5TQ9TZVP8Y -->
-<script async src="https://www.sonicbold.com/frmi/?id=GT-T56JMPWJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Sonic Bold — A Small, Plumbing-Only Marketing Team</title>
@@ -31,9 +17,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="canonical" href="https://www.sonicbold.com/about" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Barlow+Condensed:wght@600;700;800&amp;family=Barlow:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/oswald-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/css/redesign.css" />
   <script type="application/ld+json">
   {
@@ -138,6 +124,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ]
   }
   </script>
+<!-- Google Tag Manager (GTM-T854R3X2) + Google tag GT-T56JMPWJ, deferred until after window load -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  (function(w,d){var done=false;function load(){if(done)return;done=true;
+    w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var s=d.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-T854R3X2';d.head.appendChild(s);
+    var g=d.createElement('script');g.async=true;g.src='https://www.sonicbold.com/frmi/?id=GT-T56JMPWJ';d.head.appendChild(g);}
+    function soon(){setTimeout(load,2500);}
+    if(d.readyState==='complete')soon();else w.addEventListener('load',soon);
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){w.addEventListener(e,load,{once:true,passive:true});});
+  })(window,document);
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -180,7 +180,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="site-header">
     <div class="wrap nav">
       <a href="/" class="brand" aria-label="Sonic Bold home">
-        <img src="/images/logo-ink.png" alt="" width="34" height="37" />
+        <img src="/images/logo-ink.png" alt="Sonic Bold" width="34" height="37" />
         <span class="brand-text">Sonic Bold<small>Plumbing Marketing</small></span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -246,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="section founder" id="founder">
       <div class="wrap founder-layout">
         <figure class="founder-photo">
-          <img src="/images/sam-founder.jpg" alt="Sam, founder of Sonic Bold" width="800" height="960" />
+          <picture><source srcset="/images/sam-founder.webp" type="image/webp" /><img src="/images/sam-founder.jpg" alt="Sam, founder of Sonic Bold" width="800" height="960" loading="lazy" decoding="async" /></picture>
           <figcaption><strong>Sam</strong> Founder &amp; Strategy</figcaption>
         </figure>
         <div class="founder-copy">
@@ -413,6 +413,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="footer-links">
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms">Terms &amp; Conditions</a></li>
+          <li><a href="/sms-opt-in">SMS opt-in</a></li>
         </ul>
         <p class="a2p"><strong>SMS Disclosure:</strong><br />Text messages from Sonic Bold LLC are optional. If you opt in, we may text you about offers, consultation/appointment scheduling and reminders, inquiry and missed-call replies, and account/service notifications. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. Consent is not required to submit a form. See our <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms</a>.</p>
       </div>
