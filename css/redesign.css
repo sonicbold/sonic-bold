@@ -606,3 +606,11 @@ ul,ol{margin:0;padding:0;list-style:none}
 .footer-links a{display:inline-block;min-height:24px;padding:2px 0}
 .consent input{width:24px;height:24px;min-width:24px}
 .founder-photo picture{display:block}
+/* Restructure: 3-step home process + locations hub */
+@media (min-width:1101px){.steps.steps-3{grid-template-columns:repeat(3,1fr)}}
+.loc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.loc-card{background:#fff;border:3px solid var(--navy);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;align-items:flex-start;min-width:0}
+.loc-card h2{font-size:1.5rem;color:var(--navy);line-height:1.1}
+.loc-card h2 a{color:inherit}
+.loc-card p{color:var(--muted);font-size:.97rem}
+.loc-card[data-status="live"]{border-top:8px solid var(--orange)}
