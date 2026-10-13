@@ -150,24 +150,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // SMS consent is optional. Always send the field to Web3Forms, including when unchecked.
+  // SMS consent (service and marketing) is optional and collected separately.
+  // Always send each field to Web3Forms, including when unchecked.
+  const SMS_CONSENT_FIELDS = ['sms_service_consent', 'sms_marketing_consent'];
   const ensureSmsConsentValue = (form) => {
-    const box = form.querySelector('input[type="checkbox"][name="SMS Consent"]');
-    if (!box || box.disabled) return;
-    let fallback = form.querySelector('input[type="hidden"][data-sms-consent-fallback]');
-    if (!fallback) {
-      fallback = document.createElement('input');
-      fallback.type = 'hidden';
-      fallback.name = 'SMS Consent';
-      fallback.setAttribute('data-sms-consent-fallback', '');
-      form.appendChild(fallback);
-    }
-    if (box.checked) {
-      fallback.disabled = true;
-    } else {
-      fallback.disabled = false;
-      fallback.value = 'Not granted';
-    }
+    SMS_CONSENT_FIELDS.forEach((name) => {
+      const box = form.querySelector('input[type="checkbox"][name="' + name + '"]');
+      if (!box || box.disabled) return;
+      let fallback = form.querySelector('input[type="hidden"][data-sms-consent-fallback="' + name + '"]');
+      if (!fallback) {
+        fallback = document.createElement('input');
+        fallback.type = 'hidden';
+        fallback.name = name;
+        fallback.setAttribute('data-sms-consent-fallback', name);
+        form.appendChild(fallback);
+      }
+      if (box.checked) {
+        fallback.disabled = true;
+      } else {
+        fallback.disabled = false;
+        fallback.value = 'Not granted';
+      }
+    });
   };
 
   document.querySelectorAll('form').forEach((form) => {
