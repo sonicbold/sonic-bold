@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMobileMenu = () => {
       mobileDrawer.style.display = 'none';
       mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileToggle.setAttribute('aria-label', 'Open navigation');
       document.body.classList.remove('menu-open');
     };
 
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isVisible = mobileDrawer.style.display === 'block';
       mobileDrawer.style.display = isVisible ? 'none' : 'block';
       mobileToggle.setAttribute('aria-expanded', String(!isVisible));
+      mobileToggle.setAttribute('aria-label', isVisible ? 'Open navigation' : 'Close navigation');
       document.body.classList.toggle('menu-open', !isVisible);
     });
 
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) closeMobileMenu();
+      if (window.innerWidth > 1100) closeMobileMenu();
     });
   }
 

@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
   <title>Page not found | Sonic Bold</title>
   <meta name="description" content="This page could not be found. Sonic Bold helps US plumbing companies get more booked jobs with Google Ads and Local Services Ads. Head home or book a call." />
-  <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preload" href="/fonts/oswald-700.woff2" as="font" type="font/woff2" crossorigin />
@@ -30,7 +30,7 @@
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T854R3X2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
   <a class="skip" href="#main">Skip to content</a>
@@ -67,14 +67,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Header -->
   <header class="site-header">
     <div class="wrap nav">
-      <a href="/" class="brand" aria-label="Sonic Bold home">
-        <img src="/images/logo-ink.png" alt="Sonic Bold" width="34" height="37" />
+      <a href="/" class="brand">
+        <img src="/images/logo-ink.png" alt="" width="34" height="37" />
         <span class="brand-text">Sonic Bold<small>Plumbing Marketing</small></span>
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="/">Home</a>
         <a href="/how-it-works">How it works</a>
-        <a href="/locations">Locations</a>
+        <a href="/#services">Services</a>
         <a href="/results">Results</a>
         <a href="/blog">Resources</a>
         <a href="/about">About</a>
@@ -82,6 +82,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="nav-cta">
         <a href="https://calendly.com/shafiulmusnivin10/30min" class="btn btn-orange btn-sm" target="_blank" rel="noopener">Get booked jobs →</a>
       </div>
+      <button class="nav-toggle" id="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav aria-label="Mobile primary">
+        <a href="/">Home</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/#services">Services</a>
+        <a href="/results">Results</a>
+        <a href="/blog">Resources</a>
+        <a href="/about">About</a>
+      </nav>
+      <a class="btn btn-orange btn-block" href="https://calendly.com/shafiulmusnivin10/30min" target="_blank" rel="noopener">Get more booked jobs →</a>
     </div>
   </header>
 
@@ -96,7 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/" class="btn btn-blue btn-lg">Back to the homepage</a>
         </div>
         <ul style="display:grid;gap:8px;margin-top:36px;font-weight:700">
-          <li><a href="/how-it-works" style="color:var(--blue)">Services</a></li>
+          <li><a href="/#services" style="color:var(--blue)">Services</a></li>
           <li><a href="/google-ads-for-plumbers" style="color:var(--blue)">Google Ads for plumbers</a></li>
           <li><a href="/local-services-ads-for-plumbers" style="color:var(--blue)">Local Services Ads for plumbers</a></li>
           <li><a href="/free-30-days" style="color:var(--blue)">Free 30 days of Ads + LSA management</a></li>
@@ -161,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
   <!-- Mobile sticky bar -->
-  <div class="sticky-cta" aria-label="Quick actions">
+  <div class="sticky-cta" role="group" aria-label="Quick actions">
     <a href="https://calendly.com/shafiulmusnivin10/30min" class="sticky-call" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wrench"/></svg> Get booked jobs →</a>
     <a href="/#offer" class="sticky-claim">Free 30 days</a>
   </div>

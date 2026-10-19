@@ -155,7 +155,7 @@
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T854R3X2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
   <a class="skip" href="#main">Skip to content</a>
@@ -192,14 +192,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Header -->
   <header class="site-header">
     <div class="wrap nav">
-      <a href="/" class="brand" aria-label="Sonic Bold home">
-        <img src="/images/logo-ink.png" alt="Sonic Bold" width="34" height="37" />
+      <a href="/" class="brand">
+        <img src="/images/logo-ink.png" alt="" width="34" height="37" />
         <span class="brand-text">Sonic Bold<small>Plumbing Marketing</small></span>
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="/">Home</a>
         <a href="/how-it-works">How it works</a>
-        <a href="/locations" aria-current="page">Locations</a>
+        <a href="/#services">Services</a>
         <a href="/results">Results</a>
         <a href="/blog">Resources</a>
         <a href="/about">About</a>
@@ -207,6 +207,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="nav-cta">
         <a href="https://calendly.com/shafiulmusnivin10/30min" class="btn btn-orange btn-sm" target="_blank" rel="noopener">Get booked jobs →</a>
       </div>
+      <button class="nav-toggle" id="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav aria-label="Mobile primary">
+        <a href="/">Home</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/#services">Services</a>
+        <a href="/results">Results</a>
+        <a href="/blog">Resources</a>
+        <a href="/about">About</a>
+      </nav>
+      <a class="btn btn-orange btn-block" href="https://calendly.com/shafiulmusnivin10/30min" target="_blank" rel="noopener">Get more booked jobs →</a>
     </div>
   </header>
 
@@ -358,7 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
   <!-- Mobile sticky bar -->
-  <div class="sticky-cta" aria-label="Quick actions">
+  <div class="sticky-cta" role="group" aria-label="Quick actions">
     <a href="https://calendly.com/shafiulmusnivin10/30min" class="sticky-call" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wrench"/></svg> Get booked jobs →</a>
     <a href="/#offer" class="sticky-claim">Free 30 days</a>
   </div>
