@@ -163,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1 class="hero-title" style="margin-bottom:20px; font-size:clamp(2.2rem, 4vw, 3.4rem);">Find out where your plumbing Google Ads are leaking booked jobs</h1>
         <p class="section-sub" style="margin:0 auto 12px; font-size:1.15rem; line-height:1.7;">A practical audit for plumbing companies—not a glossy report. We show where money goes, which searches waste budget, and where calls fail to become booked jobs.</p>
         <div style="margin-top:28px;">
-          <a class="btn btn-primary btn-lg" href="/contact">Request my free Google Ads audit</a>
+          <a class="btn btn-primary btn-lg" href="#audit">Request my free Google Ads audit</a>
         </div>
       </div>
     </section>
@@ -195,12 +195,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>We will not pretend that an account can be judged by one number. A cheap click is not a win if nobody answers the phone. A busy call log is not a win if the calls are outside your area or never become booked jobs. The point is to connect the ad, the call, and the work on the schedule.</p>
 
           <h2>Ask for the audit</h2>
-          <p>Use the contact form to request your free Google Ads audit. Tell us a little about your plumbing company, the market you serve, and what is bothering you about the current campaigns. If you know your rough monthly ad spend or how many calls become booked jobs, include that too. If you do not know, that is fine.</p>
+          <p>Use the form below to request your free Google Ads audit. Tell us a little about your plumbing company, the market you serve, and what is bothering you about the current campaigns. If you know your rough monthly ad spend or how many calls become booked jobs, include that too. If you do not know, that is fine.</p>
           <p>We will review the details and tell you what we need to see next. No invented promises. No pressure to buy a package before anyone has looked at the account.</p>
 
-          <div style="margin-top:32px; text-align:center;">
-            <a class="btn btn-primary btn-lg" href="/contact">Request my free Google Ads audit</a>
-            <p style="margin-top:12px; font-size:0.875rem; color:#6b7280;">Form submission stays on the existing Contact workflow.</p>
+        </div>
+        <div style="max-width:560px; margin:32px auto 0;">
+          <div class="form-card" id="audit">
+            <div class="form-card-head">
+              <p class="form-kicker">Free · No obligation</p>
+              <h2>Get your free marketing audit</h2>
+              <p>We'll review your ads, LSA and call handling, find where booked jobs are leaking, and show you how to get more of them.</p>
+            </div>
+            <form id="hero-audit-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="1dc563ff-b844-4df1-9254-53dc5b78e3f5" />
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
+              <input type="hidden" name="subject" value="New Marketing Audit Request - Sonic Bold" />
+              <input type="hidden" name="from_name" value="Sonic Bold Hero Form" />
+              <div class="field">
+                <label for="h-name">Your name</label>
+                <input id="h-name" type="text" name="Contact Name" placeholder="e.g. Dave Miller" autocomplete="name" required />
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="h-phone">Phone number</label>
+                  <input id="h-phone" type="tel" name="Phone" placeholder="(555) 000-0000" autocomplete="tel" required />
+                </div>
+                <div class="field">
+                  <label for="h-email">Work email</label>
+                  <input id="h-email" type="email" name="Email" placeholder="dave@apexplumb.com" autocomplete="email" required />
+                </div>
+              </div>
+              <label class="consent">
+                <input type="checkbox" name="sms_service_consent" value="Granted" />
+                <span>Yes, I agree to receive account and service text messages from Sonic Bold LLC, such as appointment reminders and follow-ups on my inquiry, at the number provided. Consent is not a condition of purchase. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms</a>.</span>
+              </label>
+              <label class="consent" style="margin-top:8px;">
+                <input type="checkbox" name="sms_marketing_consent" value="Granted" />
+                <span>Yes, I agree to receive marketing text messages from Sonic Bold LLC, including offers and promotions, at the number provided. Consent is not a condition of purchase. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms</a>.</span>
+              </label>
+              <div class="form-error" role="alert"></div>
+              <button type="submit" class="btn btn-blue btn-block">Get my free marketing audit</button>
+              <p class="form-foot">Takes 60 seconds. We'll call to confirm fit. Nothing to sign.</p>
+            </form>
+            <div id="hero-form-success" class="form-success">
+              <h3>Audit request received</h3>
+              <p>We'll review your ads, LSA, website, and call handling and follow up with where leads are leaking.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -211,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <a href="/" class="brand brand-footer"><img src="/images/logo-cream.png" alt="" width="30" height="33" /><span>Sonic Bold</span></a>
+        <a href="/" class="brand brand-footer"><img src="/images/logo-cream.png" alt="Sonic Bold logo" width="30" height="33" /><span>Sonic Bold</span></a>
         <p>Get more booked jobs. Google Ads and Local Services Ads for US plumbing companies.</p>
         <address>
           Sonic Bold LLC<br />

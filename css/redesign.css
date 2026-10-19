@@ -103,6 +103,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero-alt{margin-top:14px;font-size:1.05rem}
 .hero-alt a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .hero-alt a:hover{color:var(--yellow)}
+.hero-layout.hero-solo{grid-template-columns:minmax(0,820px)}
+.hero-alt-quiet{font-size:.95rem}
+.hero-alt-quiet a{font-weight:400;color:#D6E1F2;text-decoration-thickness:1px}
 .hero-phone{display:inline-flex;align-items:center;gap:14px;margin-top:24px;max-width:100%;color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;font-size:2.1rem;line-height:1}
 .hero-phone .ic{width:52px;height:52px;padding:12px;background:var(--orange);color:var(--navy-dk);border-radius:50%;box-shadow:0 0 0 5px rgba(255,255,255,.2)}
 .hero-phone span{display:flex;flex-direction:column;gap:4px;min-width:0}
