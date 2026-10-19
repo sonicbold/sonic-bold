@@ -152,9 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // SMS consent (service and marketing) is optional and collected separately.
-  // Always send each field to Web3Forms, including when unchecked.
-  const SMS_CONSENT_FIELDS = ['sms_service_consent', 'sms_marketing_consent'];
+  // SMS consent is optional and collected via a single checkbox.
+  // Always send the field to Web3Forms, including when unchecked.
+  const SMS_CONSENT_FIELDS = ['sms_consent'];
   const ensureSmsConsentValue = (form) => {
     SMS_CONSENT_FIELDS.forEach((name) => {
       const box = form.querySelector('input[type="checkbox"][name="' + name + '"]');
