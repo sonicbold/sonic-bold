@@ -84,3 +84,5 @@ main article p,.seo-prose p{margin:0 0 1.1em}
   main div[style*="grid-template-columns:1fr 1fr"],main div[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
 }
 main [style*="Plus Jakarta"],main article{font-family:var(--body)!important}
+/* Inline audit form card (free-google-ads-audit) */
+main .form-card .form-card-head h2,main .form-card .form-card-head h3{color:#fff;font-size:1.75rem;margin:0 0 6px}
